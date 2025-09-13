@@ -17,7 +17,8 @@ const VolunteerExperience = () => {
   }
   
   return (
-    <section id="volunteer" className="py-24 sm:py-32">
+    <section id="volunteer" className="relative py-24 sm:py-32">
+       <div className="absolute top-0 left-0 w-full h-full bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:32px_32px] -z-10"></div>
       <div className="container max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-headline font-bold tracking-tight text-center sm:text-4xl lg:text-5xl">Volunteer Experience</h2>

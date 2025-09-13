@@ -40,7 +40,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff20_1px,transparent_1px)]"></div>
+        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(theme(colors.border)_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
         <div className="container relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-8 py-16 lg:grid-cols-2 lg:gap-16">
             <div className="flex justify-center lg:hidden">

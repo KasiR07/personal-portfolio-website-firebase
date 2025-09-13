@@ -6,7 +6,8 @@ import { cn } from '@/lib/utils';
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-24 sm:py-32">
+    <section id="certifications" className="relative py-24 sm:py-32">
+       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e20,transparent)]"></div></div>
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
             <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl lg:text-5xl">Awards & Certifications</h2>
