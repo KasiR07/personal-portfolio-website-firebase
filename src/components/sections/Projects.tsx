@@ -3,7 +3,7 @@
 
 import { useState, useTransition, useEffect } from 'react';
 import type { Project, GithubRepo } from '@/lib/types';
-import { reorderProjectsAction } from '@/app/actions';
+import { reorderProjectsAction, generateImageHintAction } from '@/app/actions';
 import { getGithubProjectsAction } from '@/app/actions';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,15 +25,26 @@ const Projects = () => {
       try {
         const githubProjects = await getGithubProjectsAction();
         
-        const mappedProjects: Project[] = githubProjects.slice(0, 9).map((repo: GithubRepo) => ({
-          id: repo.id.toString(),
-          name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
-          description: repo.description || 'No description available.',
-          technologies: repo.topics.length > 0 ? repo.topics : (repo.language ? [repo.language] : []),
-          image: `https://picsum.photos/seed/${repo.id}/600/400`,
-          link: repo.html_url,
-          html_url: repo.html_url
-        }));
+        const projectPromises = githubProjects.slice(0, 9).map(async (repo: GithubRepo) => {
+          const imageHint = await generateImageHintAction({
+            name: repo.name,
+            description: repo.description || '',
+            technologies: repo.topics.length > 0 ? repo.topics : (repo.language ? [repo.language] : []),
+          });
+
+          return {
+            id: repo.id.toString(),
+            name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
+            description: repo.description || 'No description available.',
+            technologies: repo.topics.length > 0 ? repo.topics : (repo.language ? [repo.language] : []),
+            image: `https://picsum.photos/seed/${repo.id}/600/400`,
+            link: repo.html_url,
+            html_url: repo.html_url,
+            imageHint: imageHint,
+          };
+        });
+
+        const mappedProjects = await Promise.all(projectPromises);
         setAllProjects(mappedProjects);
         setDisplayedProjects(mappedProjects);
       } catch (error) {
@@ -119,7 +130,7 @@ const Projects = () => {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      data-ai-hint="tech abstract"
+                      data-ai-hint={project.imageHint || "tech abstract"}
                     />
                   </div>
                 </CardHeader>

@@ -2,8 +2,9 @@
 
 import { reorderProjects } from '@/ai/flows/reorder-projects-flow';
 import { getGithubProjects } from '@/ai/flows/get-github-projects-flow';
+import { generateImageHint } from '@/ai/flows/generate-image-hint-flow';
 import { personalData } from '@/lib/data';
-import { ReorderProjectsInput } from '@/lib/types';
+import { ReorderProjectsInput, GenerateImageHintInput } from '@/lib/types';
 
 export async function reorderProjectsAction(input: ReorderProjectsInput) {
   try {
@@ -28,5 +29,14 @@ export async function getGithubProjectsAction() {
   } catch (error) {
     console.error("Error fetching projects from GitHub:", error);
     return [];
+  }
+}
+
+export async function generateImageHintAction(input: GenerateImageHintInput): Promise<string> {
+  try {
+    return await generateImageHint(input);
+  } catch (error) {
+    console.error("Error generating image hint:", error);
+    return "tech abstract";
   }
 }

@@ -45,6 +45,7 @@ export type Project = {
   image: string;
   link?: string;
   html_url?: string;
+  imageHint?: string;
 };
 
 export type Skill = {
@@ -109,3 +110,13 @@ export const ReorderProjectsOutputSchema = z.array(ProjectSchema);
 export type ReorderProjectsOutput = z.infer<typeof ReorderProjectsOutputSchema>;
 
 export type VolunteerExperience = Experience;
+
+export const GenerateImageHintInputSchema = z.object({
+  name: z.string().describe('The name of the project.'),
+  description: z.string().describe('A brief description of the project.'),
+  technologies: z.array(z.string()).describe('A list of technologies used.'),
+});
+export type GenerateImageHintInput = z.infer<typeof GenerateImageHintInputSchema>;
+
+export const GenerateImageHintOutputSchema = z.string().describe('A one or two-word hint for generating an image.');
+export type GenerateImageHintOutput = z.infer<typeof GenerateImageHintOutputSchema>;
