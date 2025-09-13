@@ -24,6 +24,7 @@ export type Experience = {
   role: string;
   duration: string;
   description: string;
+  location: string;
 };
 
 export type Project = {

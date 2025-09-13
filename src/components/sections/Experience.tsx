@@ -1,5 +1,5 @@
 import { experienceData } from '@/lib/data';
-import { Briefcase, Link2 } from 'lucide-react';
+import { Briefcase, Link2, MapPin } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -34,6 +34,9 @@ const Experience = () => {
                       {exp.company} <Link2 className="w-3 h-3"/>
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">{exp.duration}</p>
+                    <div className={cn("text-sm text-muted-foreground mt-1 flex items-center gap-1", index % 2 === 0 ? "justify-end" : "justify-start")}>
+                      <MapPin className="w-3 h-3"/> {exp.location}
+                    </div>
                     <Accordion type="single" collapsible className="w-full mt-2">
                       <AccordionItem value="item-1" className="border-none">
                         <AccordionTrigger className={cn("text-sm py-2 hover:no-underline gap-2", index % 2 === 0 ? "justify-end" : "justify-start")}>View description</AccordionTrigger>
