@@ -1,3 +1,4 @@
+
 import type { VolunteerExperience } from "./types";
 
 export const volunteerExperienceData: VolunteerExperience[] = [
@@ -61,7 +62,7 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         company: "TEDxVIT Vellore",
         company_link: "#",
         role: "Head of Design Department",
-        duration: "Dec 2020 - Apr 2022",
+        duration: "May 2021 - Apr 2022",
         description: "As the Head of the Design Department for TEDxVIT Vellore, I led the creative direction and visual branding for the event. I managed a team of designers to produce all visual materials, including marketing assets, stage design, and social media content, ensuring a cohesive and impactful experience for attendees.",
         location: "Vellore, Tamil Nadu, India"
     },
