@@ -59,3 +59,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .typewriter-cursor::after {
+    content: '|';
+    animation: blink 1s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}
