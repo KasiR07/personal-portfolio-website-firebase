@@ -106,3 +106,5 @@ export type ReorderProjectsInput = z.infer<typeof ReorderProjectsInputSchema>;
 
 export const ReorderProjectsOutputSchema = z.array(ProjectSchema);
 export type ReorderProjectsOutput = z.infer<typeof ReorderProjectsOutputSchema>;
+
+export type VolunteerExperience = Experience;
