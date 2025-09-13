@@ -77,6 +77,9 @@ const Hero = () => {
                     <Button asChild variant="outline" size="lg" className="font-semibold">
                       <Link href="#contact">Contact Me</Link>
                     </Button>
+                    <Button asChild variant="outline" size="lg" className="font-semibold">
+                      <a href="/resume.pdf" download>Download Resume</a>
+                    </Button>
                 </div>
             </div>
              <div className="hidden justify-center lg:flex">
