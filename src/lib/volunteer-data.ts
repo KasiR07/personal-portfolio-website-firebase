@@ -58,11 +58,11 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         location: "Vellore, Tamil Nadu, India"
     },
     {
-        company: "Uddeshya (NGO)",
+        company: "TEDxVIT Vellore",
         company_link: "#",
-        role: "Core Committee Member",
+        role: "Head of Design Department",
         duration: "Dec 2020 - Apr 2022",
-        description: "I engaged in planning, implementing, and evaluating projects to improve community welfare. I contributed to educational programs, awareness campaigns, and resource distribution to drive meaningful change, embodying our slogan: Empowering Youth, Fueling Change.",
-        location: "India"
+        description: "As the Head of the Design Department for TEDxVIT Vellore, I led the creative direction and visual branding for the event. I managed a team of designers to produce all visual materials, including marketing assets, stage design, and social media content, ensuring a cohesive and impactful experience for attendees.",
+        location: "Vellore, Tamil Nadu, India"
     },
 ];
