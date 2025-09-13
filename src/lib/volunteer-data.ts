@@ -5,7 +5,7 @@ export const volunteerExperienceData: VolunteerExperience[] = [
     {
         company: "GDG Windsor",
         company_link: "#",
-        role: "Community Volunteer",
+        role: "Community Member",
         duration: "June 2025 – Present",
         description: "As a community volunteer, I contribute to organizing events, workshops, and meetups for the Google Developer Group in Windsor, fostering a collaborative environment for developers and tech enthusiasts.",
         location: "Windsor, ON"
@@ -13,7 +13,7 @@ export const volunteerExperienceData: VolunteerExperience[] = [
     {
         company: "SWOCTS- Open CyberSec",
         company_link: "#",
-        role: "Community Volunteer",
+        role: "Community Member",
         duration: "June 2025 – Present",
         description: "I assist in initiatives aimed at promoting cybersecurity awareness and education within the community, contributing to open-source projects and helping to organize security-focused events.",
         location: "Windsor, ON"
