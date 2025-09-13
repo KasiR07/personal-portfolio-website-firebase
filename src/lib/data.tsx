@@ -1,7 +1,7 @@
 
 import { Certification, Experience, NavItem, PersonalData, CategorizedSkill } from "./types";
 import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet } from "lucide-react";
-import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon } from "@/components/common/Icons";
+import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon, FigmaIcon } from "@/components/common/Icons";
 
 export const navItems: NavItem[] = [
     { name: "About", href: "#about" },
@@ -150,6 +150,19 @@ export const skillsData: CategorizedSkill[] = [
         ]
     },
     {
+        category: "Web Frameworks & Libraries",
+        skills: [
+            { name: "React.js", icon: <Code /> },
+            { name: "Vue.js", icon: <Code /> },
+            { name: "Next.js", icon: <Code /> },
+            { name: "HTML", icon: <Code /> },
+            { name: "CSS", icon: <Code /> },
+            { name: "JavaFX", icon: <Code /> },
+            { name: "Three.js", icon: <Code /> },
+            { name: "D3.js", icon: <LineChart /> },
+        ]
+    },
+    {
         category: "Platforms & Tools",
         skills: [
             { name: "Power BI", icon: <LineChart /> },
@@ -159,7 +172,7 @@ export const skillsData: CategorizedSkill[] = [
             { name: "Jira", icon: <GanttChartSquare /> },
             { name: "SAS", icon: <Code /> },
             { name: "Excel", icon: <FileSpreadsheet /> },
-            { name: "Figma", icon: <Code /> },
+            { name: "Figma", icon: <FigmaIcon /> },
         ]
     },
     {
