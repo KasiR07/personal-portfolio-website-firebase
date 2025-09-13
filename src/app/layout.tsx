@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from '@/components/common/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Data Canvas',
+  title: 'N. V. Sai Ruthvik Kasi',
   description: 'A portfolio for a data scientist with an AI theme.',
 };
 
@@ -27,8 +27,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <Toaster />
+          <div className="relative">
+            <div className="absolute top-0 left-0 -z-10 h-full w-full bg-background">
+              <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-primary/20 opacity-50 blur-[80px]"></div>
+            </div>
+            {children}
+            <Toaster />
+          </div>
         </ThemeProvider>
       </body>
     </html>

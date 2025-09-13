@@ -6,6 +6,9 @@ import { ChevronDown } from 'lucide-react';
 const Hero = () => {
   return (
     <section id="home" className="relative container flex flex-col items-center justify-center min-h-[calc(100vh-3.5rem)] text-center py-20">
+       <div className="absolute inset-0 -z-10 h-full w-full bg-background [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]">
+        <div className="absolute left-1/2 top-1/2 -z-10 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl"></div>
+      </div>
       <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
         {personalData.name}
       </h1>
