@@ -30,7 +30,8 @@ const Projects = () => {
           'Housing-Price-Prediction-System',
           'Deciphering-Narratives-AI-Driven-Storytelling-with-User-Centric-NLP-Dialogue',
           'Content-Based-Image-Retrieval',
-          'Client-Server-DFS-in-Linux'
+          'Client-Server-DFS-in-Linux',
+          'Smart-NY-Bike-Analysis'
         ];
         
         const filteredProjects = githubProjects.filter(repo => projectsToInclude.includes(repo.name));
