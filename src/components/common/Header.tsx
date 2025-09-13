@@ -1,23 +1,29 @@
+
 'use client';
 
-import { BrainCircuit } from 'lucide-react';
+import { BrainCircuit, Menu, Search, X } from 'lucide-react';
 import Link from 'next/link';
 import { navItems } from '@/lib/data.tsx';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '../ui/button';
-import { Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import { Input } from '../ui/input';
 
-const Header = () => {
+type HeaderProps = {
+  searchQuery: string;
+  onSearchChange: (query: string) => void;
+};
+
+const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#home');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    // If we are on a different page, don't set any active link
     if (pathname !== '/') {
       setActiveLink('');
       return;
@@ -38,7 +44,7 @@ const Header = () => {
 
     if (pathname === '/') {
       window.addEventListener('scroll', handleScroll);
-      handleScroll(); // Set initial active link
+      handleScroll();
     }
 
     return () => {
@@ -51,10 +57,14 @@ const Header = () => {
   const handleLinkClick = (href: string) => {
     setActiveLink(href);
     if (pathname !== '/') {
-      // Navigate to home if on a different page
       window.location.href = `/${href}`;
     }
   };
+
+  const clearSearch = () => {
+    onSearchChange('');
+    setIsSearchOpen(false);
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -65,7 +75,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium">
+        <nav className={cn("hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium", isSearchOpen ? 'md:hidden' : 'md:flex')}>
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -83,34 +93,57 @@ const Header = () => {
           ))}
         </nav>
 
-        <div className="flex items-center justify-end gap-2 md:flex-1">
-          <ThemeToggle />
-          <div className="md:hidden">
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle Menu</span>
+        <div className={cn("flex-1 md:flex-none", isSearchOpen ? 'w-full' : 'w-auto')}>
+          <div className="flex items-center justify-end gap-2">
+            <div className={cn("relative w-full max-w-sm", isSearchOpen ? 'block' : 'hidden md:block')}>
+              <Input
+                type="search"
+                placeholder="Search portfolio..."
+                className="w-full pl-10"
+                value={searchQuery}
+                onChange={(e) => onSearchChange(e.target.value)}
+                onFocus={() => setIsSearchOpen(true)}
+                onBlur={() => !searchQuery && setIsSearchOpen(false)}
+              />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+              {searchQuery && (
+                <Button variant="ghost" size="icon" className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7" onClick={clearSearch}>
+                   <X className="h-4 w-4" />
                 </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-[240px]">
-                  <div className="mt-8 flex flex-col space-y-2">
-                      {navItems.map((item) => (
-                          <Link
-                              key={item.name}
-                              href={item.href}
-                              className="text-lg font-medium px-3 py-2 rounded-md transition-colors hover:bg-accent/50"
-                              onClick={() => {
-                                setIsOpen(false);
-                                handleLinkClick(item.href);
-                              }}
-                          >
-                              {item.name}
-                          </Link>
-                      ))}
-                  </div>
-              </SheetContent>
-            </Sheet>
+              )}
+            </div>
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsSearchOpen(!isSearchOpen)}>
+              {isSearchOpen ? <X className="h-5 w-5"/> : <Search className="h-5 w-5" />}
+              <span className="sr-only">Toggle Search</span>
+            </Button>
+            <ThemeToggle />
+            <div className="md:hidden">
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle Menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[240px]">
+                    <div className="mt-8 flex flex-col space-y-2">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="text-lg font-medium px-3 py-2 rounded-md transition-colors hover:bg-accent/50"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  handleLinkClick(item.href);
+                                }}
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
         </div>
       </div>

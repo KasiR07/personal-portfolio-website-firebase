@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState, useTransition, useEffect } from 'react';
+import { useState, useTransition, useEffect, useMemo } from 'react';
 import type { Project, GithubRepo } from '@/lib/types';
 import { reorderProjectsAction } from '@/app/actions';
 import { getGithubProjectsAction } from '@/app/actions';
@@ -11,8 +12,13 @@ import Image from 'next/image';
 import { Wand2, Loader2, Github } from 'lucide-react';
 import { personalData } from '@/lib/data';
 
-const Projects = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
+type ProjectsProps = {
+  searchQuery: string;
+};
+
+const Projects = ({ searchQuery }: ProjectsProps) => {
+  const [allProjects, setAllProjects] = useState<Project[]>([]);
+  const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
   const [isPending, startTransition] = useTransition();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -31,7 +37,8 @@ const Projects = () => {
           link: repo.html_url,
           html_url: repo.html_url
         }));
-        setProjects(mappedProjects);
+        setAllProjects(mappedProjects);
+        setDisplayedProjects(mappedProjects);
       } catch (error) {
         console.error("Failed to fetch GitHub projects:", error);
       }
@@ -40,9 +47,22 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
+  const filteredProjects = useMemo(() => {
+    if (!searchQuery) {
+      return displayedProjects;
+    }
+    return displayedProjects.filter(project => {
+      const searchLower = searchQuery.toLowerCase();
+      const nameMatch = project.name.toLowerCase().includes(searchLower);
+      const descriptionMatch = project.description.toLowerCase().includes(searchLower);
+      const techMatch = project.technologies.some(tech => tech.toLowerCase().includes(searchLower));
+      return nameMatch || descriptionMatch || techMatch;
+    });
+  }, [searchQuery, displayedProjects]);
+
   const handleAiReorder = () => {
     startTransition(async () => {
-      const projectsToReorder = projects.map(p => ({
+      const projectsToReorder = displayedProjects.map(p => ({
         name: p.name,
         description: p.description,
         technologies: p.technologies
@@ -50,16 +70,22 @@ const Projects = () => {
       const reorderedProjectNames = await reorderProjectsAction({ projects: projectsToReorder });
       
       const reorderedProjects = reorderedProjectNames.map(rp => {
-          const originalProject = projects.find(p => p.name === rp.name);
+          const originalProject = displayedProjects.find(p => p.name === rp.name);
           return originalProject!;
       }).filter(p => p);
 
       const uniqueReorderedProjects = Array.from(new Set(reorderedProjects.map(p => p.id)))
         .map(id => reorderedProjects.find(p => p.id === id)!);
       
-      const remainingProjects = projects.filter(p => !uniqueReorderedProjects.some(urp => urp.id === p.id));
+      const remainingProjects = displayedProjects.filter(p => !uniqueReorderedProjects.some(urp => urp.id === p.id));
       
-      setProjects([...uniqueReorderedProjects, ...remainingProjects]);
+      const newDisplayedProjects = [...uniqueReorderedProjects, ...remainingProjects];
+      setDisplayedProjects(newDisplayedProjects);
+
+      // Also update the base list of projects if no search is active
+      if (!searchQuery) {
+        setAllProjects(newDisplayedProjects);
+      }
     });
   };
 
@@ -72,7 +98,7 @@ const Projects = () => {
             <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl lg:text-5xl">My Projects</h2>
             <p className="mt-2 text-muted-foreground">A selection of my most recent public repositories from GitHub.</p>
           </div>
-          <Button onClick={handleAiReorder} disabled={isPending || projects.length === 0} className="flex-shrink-0">
+          <Button onClick={handleAiReorder} disabled={isPending || displayedProjects.length === 0} className="flex-shrink-0">
             {isPending ? (
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
             ) : (
@@ -100,9 +126,9 @@ const Projects = () => {
               </Card>
             ))}
           </div>
-        ) : (
+        ) : filteredProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20">
                 <CardHeader className="p-0">
                   <div className="aspect-video relative">
@@ -138,6 +164,8 @@ const Projects = () => {
               </Card>
             ))}
           </div>
+        ) : (
+          <p className="text-center text-muted-foreground col-span-full">No projects found matching your search.</p>
         )}
 
         <div className="mt-12 text-center">
