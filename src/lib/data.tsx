@@ -1,6 +1,6 @@
 
-import { Certification, Experience, NavItem, PersonalData, Project, Skill } from "./types";
-import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart } from "lucide-react";
+import { Certification, Experience, NavItem, PersonalData, CategorizedSkill } from "./types";
+import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon } from "@/components/common/Icons";
 
 export const navItems: NavItem[] = [
@@ -84,54 +84,91 @@ export const experienceData: Experience[] = [
     }
 ];
 
-export const projectsData: Project[] = [
+export const skillsData: CategorizedSkill[] = [
     {
-        id: "1",
-        name: "Customer Churn Prediction",
-        description: "A machine learning model to predict customer churn for a subscription-based service, enabling proactive retention strategies.",
-        technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib"],
-        image: "https://picsum.photos/seed/proj1/600/400",
-        link: "#",
+        category: "Programming & Scripting",
+        skills: [
+            { name: "Python", icon: <PythonIcon /> },
+            { name: "R", icon: <RLangIcon /> },
+            { name: "SQL", icon: <Database /> },
+            { name: "Java", icon: <Code /> },
+            { name: "JavaScript", icon: <Code /> },
+            { name: "Matlab", icon: <Code /> },
+        ]
     },
     {
-        id: "2",
-        name: "Real-time Sentiment Analysis",
-        description: "An application that analyzes social media streams in real-time to gauge public sentiment about specific topics.",
-        technologies: ["Python", "TensorFlow", "NLTK", "Flask"],
-        image: "https://picsum.photos/seed/proj2/600/400",
-        link: "#",
+        category: "Databases & Querying",
+        skills: [
+            { name: "MySQL", icon: <Database /> },
+            { name: "PostgreSQL", icon: <Database /> },
+            { name: "MongoDB", icon: <Database /> },
+            { name: "Hive", icon: <Database /> },
+            { name: "Snowflake", icon: <Database /> },
+            { name: "Neo4j", icon: <Database /> },
+            { name: "Spark", icon: <Cpu /> },
+            { name: "Hadoop", icon: <Database /> },
+        ]
     },
     {
-        id: "3",
-        name: "Image Recognition for Retail",
-        description: "A deep learning model that identifies products on shelves from images, helping automate inventory management.",
-        technologies: ["PyTorch", "OpenCV", "Convolutional Neural Networks"],
-        image: "https://picsum.photos/seed/proj3/600/400",
-        link: "#",
+        category: "Machine Learning & AI",
+        skills: [
+            { name: "Scikit-learn", icon: <ScikitLearnIcon /> },
+            { name: "TensorFlow", icon: <TensorFlowIcon /> },
+            { name: "PyTorch", icon: <PyTorchIcon /> },
+            { name: "NLP", icon: <BotMessageSquare /> },
+            { name: "OpenCV", icon: <Code /> },
+            { name: "Generative AI", icon: <BrainCircuit /> },
+        ]
     },
     {
-        id: "4",
-        name: "Financial Market Forecasting",
-        description: "Time-series analysis and LSTM-based models to predict stock market movements and inform investment strategies.",
-        technologies: ["R", "Keras", "Quantitative Analysis"],
-        image: "https://picsum.photos/seed/proj4/600/400",
-        link: "#",
+        category: "Gen AI & LLMs",
+        skills: [
+            { name: "Prompt Engineering", icon: <Settings /> },
+            { name: "RAG", icon: <BrainCircuit /> },
+            { name: "AI Agents", icon: <BotMessageSquare /> },
+            { name: "OpenAI", icon: <BrainCircuit /> },
+            { name: "Hugging Face", icon: <Cpu /> },
+            { name: "Copilot", icon: <BotMessageSquare /> },
+        ]
     },
-];
-
-export const skillsData: Skill[] = [
-    { name: "Python", icon: <PythonIcon /> },
-    { name: "R", icon: <RLangIcon /> },
-    { name: "SQL", icon: <Database /> },
-    { name: "PyTorch", icon: <PyTorchIcon /> },
-    { name: "TensorFlow", icon: <TensorFlowIcon /> },
-    { name: "Scikit-learn", icon: <ScikitLearnIcon /> },
-    { name: "AWS", icon: <Cloud /> },
-    { name: "Docker", icon: <DockerIcon /> },
-    { name: "Git", icon: <GitMerge /> },
-    { name: "MLOps", icon: <BrainCircuit /> },
-    { name: "Data Viz", icon: <LineChart /> },
-    { name: "API Dev", icon: <Code /> },
+    {
+        category: "Data Pipelines & Ops",
+        skills: [
+            { name: "ETL", icon: <Workflow /> },
+            { name: "DataOps", icon: <Settings /> },
+            { name: "Feature Engineering", icon: <Cpu /> },
+        ]
+    },
+    {
+        category: "Cloud Platforms",
+        skills: [
+            { name: "AWS", icon: <Cloud /> },
+            { name: "Azure", icon: <Cloud /> },
+            { name: "GCP", icon: <Cloud /> },
+            { name: "MS Fabric", icon: <Cloud /> },
+        ]
+    },
+    {
+        category: "Platforms & Tools",
+        skills: [
+            { name: "Power BI", icon: <LineChart /> },
+            { name: "Tableau", icon: <LineChart /> },
+            { name: "Git", icon: <GitMerge /> },
+            { name: "Docker", icon: <DockerIcon /> },
+            { name: "Jira", icon: <GanttChartSquare /> },
+            { name: "SAS", icon: <Code /> },
+            { name: "Visio", icon: <GanttChartSquare /> },
+            { name: "AutoCAD", icon: <Code /> },
+        ]
+    },
+    {
+        category: "Business & Project Management",
+        skills: [
+            { name: "Business Analysis", icon: <Briefcase /> },
+            { name: "Project Management", icon: <GanttChartSquare /> },
+            { name: "Agile", icon: <Users /> },
+        ]
+    }
 ];
 
 export const certificationsData: Certification[] = [

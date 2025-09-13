@@ -43,6 +43,11 @@ export type Skill = {
   icon: React.ReactNode;
 };
 
+export type CategorizedSkill = {
+  category: string;
+  skills: Skill[];
+}
+
 export type Certification = {
   name: string;
   issuer: string;
