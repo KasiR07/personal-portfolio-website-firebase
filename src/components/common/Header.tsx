@@ -75,7 +75,7 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           </Link>
         </div>
 
-        <nav className={cn("hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium", isSearchOpen ? 'md:hidden' : 'md:flex')}>
+        <nav className={cn("hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium", isSearchOpen && 'md:hidden' )}>
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -93,31 +93,34 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           ))}
         </nav>
 
-        <div className={cn("flex-1 md:flex-none", isSearchOpen ? 'w-full' : 'w-auto')}>
-          <div className="flex items-center justify-end gap-2">
-            <div className={cn("relative w-full max-w-sm", isSearchOpen ? 'block' : 'hidden md:block')}>
-              <Input
-                type="search"
-                placeholder="Search portfolio..."
-                className="w-full pl-10"
-                value={searchQuery}
-                onChange={(e) => onSearchChange(e.target.value)}
-                onFocus={() => setIsSearchOpen(true)}
-                onBlur={() => !searchQuery && setIsSearchOpen(false)}
-              />
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              {searchQuery && (
-                <Button variant="ghost" size="icon" className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7" onClick={clearSearch}>
-                   <X className="h-4 w-4" />
-                </Button>
-              )}
+        <div className={cn("flex items-center justify-end flex-1 md:flex-none", isSearchOpen && 'w-full')}>
+            <div className={cn("w-full max-w-sm hidden", (isSearchOpen || searchQuery) && 'block', 'md:block')}>
+              <div className="relative">
+                <Input
+                  type="search"
+                  placeholder="Search portfolio..."
+                  className="w-full pl-10"
+                  value={searchQuery}
+                  onChange={(e) => onSearchChange(e.target.value)}
+                  onFocus={() => setIsSearchOpen(true)}
+                  onBlur={() => !searchQuery && setIsSearchOpen(false)}
+                />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                {searchQuery && (
+                  <Button variant="ghost" size="icon" className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7" onClick={clearSearch}>
+                    <X className="h-4 w-4" />
+                  </Button>
+                )}
+              </div>
             </div>
-            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsSearchOpen(!isSearchOpen)}>
-              {isSearchOpen ? <X className="h-5 w-5"/> : <Search className="h-5 w-5" />}
-              <span className="sr-only">Toggle Search</span>
-            </Button>
+            {!searchQuery && (
+              <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsSearchOpen(!isSearchOpen)}>
+                {isSearchOpen ? <X className="h-5 w-5"/> : <Search className="h-5 w-5" />}
+                <span className="sr-only">Toggle Search</span>
+              </Button>
+            )}
             <ThemeToggle />
-            <div className="md:hidden">
+            <div className={cn("md:hidden", isSearchOpen && "hidden")}>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">
@@ -144,7 +147,6 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
                 </SheetContent>
               </Sheet>
             </div>
-          </div>
         </div>
       </div>
     </header>
