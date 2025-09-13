@@ -21,22 +21,8 @@ const Projects = () => {
       setIsLoading(true);
       try {
         const githubProjects = await getGithubProjectsAction();
-
-        const projectsToInclude = [
-          'genre-classification-system',
-          'Google-Cloud-Agentverse-Data-Engineer',
-          'AES-Image-Encryption',
-          'AI-Driven-Career-Guidance-System',
-          'Housing-Price-Prediction-System',
-          'Deciphering-Narratives-AI-Driven-Storytelling-with-User-Centric-NLP-Dialogue',
-          'Content-Based-Image-Retrieval',
-          'Client-Server-DFS-in-Linux',
-          'Smart-NY-Bike-Analysis'
-        ];
         
-        const filteredProjects = githubProjects.filter(repo => projectsToInclude.includes(repo.name));
-
-        const mappedProjects: Project[] = filteredProjects.map((repo: GithubRepo) => ({
+        const mappedProjects: Project[] = githubProjects.slice(0, 9).map((repo: GithubRepo) => ({
           id: repo.id.toString(),
           name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
           description: repo.description || 'No description available.',
@@ -83,7 +69,7 @@ const Projects = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
           <div className="text-center md:text-left">
             <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl lg:text-5xl">My Projects</h2>
-            <p className="mt-2 text-muted-foreground">A selection of my public repositories from GitHub.</p>
+            <p className="mt-2 text-muted-foreground">A selection of my most recent public repositories from GitHub.</p>
           </div>
           <Button onClick={handleAiReorder} disabled={isPending || projects.length === 0} className="flex-shrink-0">
             {isPending ? (
