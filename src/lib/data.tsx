@@ -41,30 +41,6 @@ export const experienceData: Experience[] = [
         description: "Developed ML pipelines on 100,000+ image-caption pairs using tools & Transformers, leveraging transfer learning to achieve a 20% boost in output accuracy and contribute to a cross-team AI research collaboration. Created a CNN-based genre classifier trained on 5,000+ audio wave forms, reaching 91% test accuracy and enabling integration of audio features into a novel multimodal storytelling framework via supervised learning. Deployed 4 ML models on AWS EC2 and S3 with pipeline orchestration, using containerization and CI/CD to cut setup time by 60% and increase team deployment efficiency across iterations in the research lifecycle. Co-authored a research paper on multimodal AI storytelling, integrating 3 model types across 2 modalities and completing the project ahead of schedule with 100% productivity using cloud computing infrastructure.",
         location: "Singapore"
     },
-    {
-        company: "Innovate AI",
-        company_link: "#",
-        role: "Senior Data Scientist",
-        duration: "Jan 2021 - Present",
-        description: "Led a team to develop a novel recommendation engine, increasing user engagement by 25%. Designed and implemented NLP models for sentiment analysis on customer feedback, providing actionable insights to the product team.",
-        location: "San Francisco, CA"
-    },
-    {
-        company: "Data Insights Corp.",
-        company_link: "#",
-        role: "Data Scientist",
-        duration: "Jun 2018 - Dec 2020",
-        description: "Built predictive models to forecast sales trends with 95% accuracy. Conducted A/B testing and statistical analysis to optimize marketing campaigns, resulting in a 15% increase in conversion rates.",
-        location: "New York, NY"
-    },
-    {
-        company: "Tech Solutions Ltd.",
-        company_link: "#",
-        role: "Junior Data Analyst",
-        duration: "Jul 2016 - May 2018",
-        description: "Cleaned and processed large datasets to support the data science team. Created dashboards and visualizations to communicate key metrics to stakeholders.",
-        location: "Boston, MA"
-    },
 ];
 
 export const projectsData: Project[] = [
