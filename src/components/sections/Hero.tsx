@@ -45,20 +45,20 @@ const Hero = () => {
 
         <div className="container relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-8 py-16 lg:grid-cols-2 lg:gap-16">
             <div className="flex justify-center lg:hidden">
-                 <div className="relative w-64 h-64 group">
+                 <div className="relative w-72 h-72 group">
                     <div className="overflow-hidden w-full h-full rounded-full shadow-2xl">
                       <Image
                         src={personalData.avatar}
                         alt={personalData.name}
-                        width={300}
-                        height={300}
+                        width={350}
+                        height={350}
                         className="object-cover w-full h-full"
                         data-ai-hint="professional headshot"
                         priority
                       />
                     </div>
-                    <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl -z-10"></div>
-                    <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent/20 rounded-full blur-2xl -z-10"></div>
+                    <div className="absolute -bottom-4 -left-4 w-36 h-36 bg-primary/10 rounded-full blur-2xl -z-10"></div>
+                    <div className="absolute -top-4 -right-4 w-36 h-36 bg-accent/20 rounded-full blur-2xl -z-10"></div>
                  </div>
             </div>
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -84,20 +84,20 @@ const Hero = () => {
                 </div>
             </div>
              <div className="hidden justify-center lg:flex">
-                 <div className="relative w-80 h-80 group">
+                 <div className="relative w-96 h-96 group">
                     <div className="overflow-hidden w-full h-full rounded-full shadow-2xl">
                       <Image
                         src={personalData.avatar}
                         alt={personalData.name}
-                        width={400}
-                        height={400}
+                        width={450}
+                        height={450}
                         className="object-cover w-full h-full"
                         data-ai-hint="professional headshot"
                         priority
                       />
                     </div>
-                    <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:translate-x-4"></div>
-                    <div className="absolute -top-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:-translate-x-4"></div>
+                    <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/10 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:translate-x-4"></div>
+                    <div className="absolute -top-8 -right-8 w-48 h-48 bg-accent/20 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:-translate-x-4"></div>
                  </div>
             </div>
         </div>
