@@ -53,7 +53,7 @@ export const educationData: Education[] = [
 export const experienceData: Experience[] = [
     {
         company: "MealLens Inc",
-        company_link: "#",
+        company_link: "https://mealvue.online/",
         role: "Full Stack Intern",
         duration: "May 2025 – August 2025",
         description: "Developed a modular admin dashboard using React, TypeScript, and Vite, cutting build time by 40% via component reuse, CI/CD integration, and clean architecture patterns for future-ready CMS or analytics systems. Engineered schema-based validation with React Hook Form using Zod & Yup, cutting form bugs by 65% via controlled inputs, debounced side effects, and modular rule enforcement aligned with object-oriented principles. Built accessible UI using Tailwind CSS & ShadCN UI, applying utility classes, semantic HTML, and break point design, enabling responsive behavior across 15+ screens and supporting cross-platform development on Linux. Isolated frontend logic using hooks and services to boost modularity, maintainability, and onboarding by 30%.",
@@ -61,7 +61,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "Sharaf DG",
-        company_link: "#",
+        company_link: "https://uae.sharafdg.com/",
         role: "Data Analyst Intern",
         duration: "Feb 2024 - Aug 2024",
         description: "Processed 50,000+ energy records using pandas, SQL & Excel, applying data cleaning techniques to reduce raw data errors by 35% & decrease preparation time by 40% for weekly performance & yield reports across regions. Developed over 12 automated ETL pipelines for data engineering to process sensor data from 200+ solar panels, decreasing manual data handling by 85% and enabling 24/7 live updates for energy monitoring dashboards. Designed 30+ Power BI dashboards for data visualization, used weekly by 6 departments, reducing report generation time by 60% and increasing insight visibility on panel efficiency, downtime, and predicted performance. Flagged 40+ system fault patterns with O&M through anomaly detection techniques, reducing downtime by 25%.",
@@ -69,7 +69,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "National University of Singapore",
-        company_link: "#",
+        company_link: "https://nus.edu.sg/",
         role: "Research Intern",
         duration: "July 2023 – November 2023",
         description: "Developed ML pipelines on 100,000+ image-caption pairs using tools & Transformers, leveraging transfer learning to achieve a 20% boost in output accuracy and contribute to a cross-team AI research collaboration. Created a CNN-based genre classifier trained on 5,000+ audio wave forms, reaching 91% test accuracy and enabling integration of audio features into a novel multimodal storytelling framework via supervised learning. Deployed 4 ML models on AWS EC2 and S3 with pipeline orchestration, using containerization and CI/CD to cut setup time by 60% and increase team deployment efficiency across iterations in the research lifecycle. Co-authored a research paper on multimodal AI storytelling, integrating 3 model types across 2 modalities and completing the project ahead of schedule with 100% productivity using cloud computing infrastructure.",
@@ -77,7 +77,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "Uddeshya (NGO)",
-        company_link: "#",
+        company_link: "https://uddeshyaindia.org/",
         role: "Web Dev Member",
         duration: "January 2023 – April 2023",
         description: "Constructed a multi-page event site using HTML, CSS, Bootstrap, and JS with responsive UI design, increasing mobile retention by 38%, reducing bounce by 26%, and aligning structure to modular layout practices. Integrated jQuery & AOS for scroll-based transitions on 30+ sections, extending time-on-page by 2.4x via smoother UI animations, interactive effects, and improved UX across mobile and low-bandwidth platforms. Designed UI paths with archive, media gallery, and timeline modules leveraging React.js, increasing engagement by 40% through intuitive navigation, modular design patterns, and optimized signal flow across user routes. Deployed via Vercel CI/CD with GitHub and Next.js, cutting rollbacks by 70% and boosting release confidence.",
@@ -85,7 +85,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "SmartInternz",
-        company_link: "#",
+        company_link: "https://smartinternz.com/",
         role: "Data Analyst Intern",
         duration: "May 2023 – July 2023",
         description: "Engineered a full-stack analytics platform for NYC bike data using React.js and Flask, enabling live query processing, API routing, and client-side interactivity for multi-dimensional data exploration across 100K+ records. Analyzed trip logs using Python & Tableau to extract hourly usage trends, station-wise output, and demographic segmentation, improving visual precision by 38% via data preprocessing, filtering layers, and aggregate metrics. Integrated Tableau dashboards into the app interface for rendering, applying live data filtering and backend triggers to automate data refresh cycles, improving analytical response time by 45% during multi-slice queries. Deployed front-end components for station-wise analysis, connecting to Flask endpoints for asynchronous rendering and map-based metrics display, advancing mobility trend inputs by 40% using geographic data alignment.",
@@ -101,7 +101,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "Miramar Al Aqah Beach Resort",
-        company_link: "#",
+        company_link: "https://www.miramaralaqah.com/",
         role: "Database Administrator",
         duration: "Dec 2018 - Jan 2019",
         description: "During my time at Miramar, I was responsible for managing and maintaining internal databases that tracked customer interactions, sales transactions, and inventory records. I regularly updated records to ensure accuracy and consistency, which played a critical role in supporting smooth day-to-day operations. My role involved routine data validation, performing error checks, and resolving discrepancies to uphold data integrity. I collaborated closely with the operations and finance teams to generate reports for performance tracking and business decision-making. I used tools like Microsoft Excel and basic SQL queries to extract, clean, and analyze data. Additionally, I assisted in implementing regular backup procedures and supported data privacy compliance efforts.",
