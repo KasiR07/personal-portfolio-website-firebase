@@ -218,35 +218,41 @@ export const certificationsData: Certification[] = [
         highlight: true,
     },
     {
+        name: "Responsible AI with GitHub Copilot",
+        issuer: "Microsoft",
+        year: "Aug 2025",
+        link: "https://learn.microsoft.com/api/achievements/share/en-us/NAGAVENKATASAIRUTHVIKKASI-5469/A4W9WN87?sharingId=275C279E5C17E306",
+    },
+    {
         name: "AWS Educate Introduction to Generative AI",
         issuer: "Amazon Web Services (AWS)",
         year: "Aug 2025",
-        link: "#",
+        link: "https://www.credly.com/badges/96db0deb-b3ea-4158-9c27-0da005949fe3/linked_in_profile",
     },
     {
         name: "Microsoft Certified: Azure Fundamentals",
         issuer: "Microsoft",
         year: "Jul 2025",
-        link: "#",
+        link: "https://learn.microsoft.com/en-us/users/nagavenkatasairuthvikkasi-5469/transcript/v0y23ilj91zlle8",
         highlight: true,
     },
     {
         name: "Career Essentials in Business Analysis by Microsoft",
         issuer: "Microsoft",
         year: "Jul 2025",
-        link: "#",
+        link: "https://www.linkedin.com/learning/certificates/76e5bb2de3b5fd7b92a7a15021f84d7a6bf62efd0fed6a91b5dbb65ab5d5cb36?trk=share_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BYG9xmxbITf%2BwnmGXHAlN3Q%3D%3D",
     },
     {
         name: "Deloitte Australia - Data Analytics Job Simulation",
         issuer: "Deloitte",
         year: "Jul 2025",
-        link: "#",
+        link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_WsT3Jp2TTnFTZH5hu_1752197922907_completion_certificate.pdf",
     },
     {
         name: "Introduction to end-to-end analytics using Microsoft Fabric",
         issuer: "Microsoft",
         year: "Jul 2025",
-        link: "#",
+        link: "https://learn.microsoft.com/api/achievements/share/en-us/NAGAVENKATASAIRUTHVIKKASI-5469/XQGD27EY?sharingId=275C279E5C17E306",
     },
     {
         name: "Data Science: Advanced Excel and Power BI",
@@ -265,13 +271,13 @@ export const certificationsData: Certification[] = [
         name: "Data Analytics with Deep Learning",
         issuer: "National University of Singapore (NUS)",
         year: "Jul 2023",
-        link: "#",
+        link: "https://credentials.nus.edu.sg/1f3bc135-fbd5-4c3f-91fa-f5808b090d0f",
     },
     {
         name: "Microsoft Certified: Security, Compliance and Identity Fundamentals",
         issuer: "Microsoft",
         year: "Jul 2023",
-        link: "#",
+        link: "https://www.credly.com/badges/4dc8aa28-05ce-46dd-bf05-81bdb769c99d/linked_in_profile",
         highlight: true,
     },
     {
@@ -283,3 +289,6 @@ export const certificationsData: Certification[] = [
     },
 ];
 
+
+
+    
