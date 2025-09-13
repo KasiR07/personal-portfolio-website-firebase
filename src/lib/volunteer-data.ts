@@ -25,11 +25,11 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         description: "As a volunteer for Celebration of Nations, I was assigned the role of crowd control, ensuring the smooth movement of attendees and assisting in maintaining a welcoming and organized environment. This experience allowed me to engage with people from diverse cultural backgrounds, learning about their traditions, languages, and perspectives, which deepened my appreciation for global diversity and cross-cultural exchange.",
         location: "Windsor, ON"
     },
-     {
+    {
         company: "Canadian Cancer Society",
         company_link: "#",
         role: "Volunteer",
-        duration: "Present",
+        duration: "Oct 2024",
         description: "Details about your role and contributions at the Canadian Cancer Society.",
         location: "Windsor, ON"
     },
@@ -37,7 +37,7 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         company: "Whamburg",
         company_link: "#",
         role: "Food Server Volunteer",
-        duration: "Present",
+        duration: "Sept 2024",
         description: "Details about your role and contributions as a food server volunteer at Whamburg.",
         location: "Windsor, ON"
     },
