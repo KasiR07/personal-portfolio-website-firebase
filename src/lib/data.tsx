@@ -25,6 +25,7 @@ export const personalData: PersonalData = {
         email: "sairkasi792@gmail.com",
         github: "https://github.com/KasiR07",
         linkedin: "https://linkedin.com/in/sai-r-kasi/",
+        instagram: "https://www.instagram.com/kasi_ruthvik07/",
     }
 };
 
@@ -281,4 +282,3 @@ export const certificationsData: Certification[] = [
         highlight: true,
     },
 ];
-

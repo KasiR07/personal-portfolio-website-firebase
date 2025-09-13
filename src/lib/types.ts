@@ -16,6 +16,7 @@ export type PersonalData = {
     email: string;
     github: string;
     linkedin: string;
+    instagram: string;
   };
 };
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { personalData, navItems } from '@/lib/data';
-import { Github, Linkedin, Mail, BrainCircuit } from 'lucide-react';
+import { Github, Linkedin, Mail, BrainCircuit, Instagram } from 'lucide-react';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -56,6 +56,9 @@ const Footer = () => {
                         </a>
                         <a href={personalData.contact.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground" aria-label="LinkedIn">
                             <Linkedin className="h-5 w-5" />
+                        </a>
+                         <a href={personalData.contact.instagram} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground" aria-label="Instagram">
+                            <Instagram className="h-5 w-5" />
                         </a>
                     </div>
                 </div>
