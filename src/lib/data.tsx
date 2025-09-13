@@ -186,39 +186,27 @@ export const skillsData: CategorizedSkill[] = [
 
 export const certificationsData: Certification[] = [
     {
-        name: "Databricks Fundamentals Accreditation",
-        issuer: "Databricks",
-        year: "Aug 2025",
-        link: "#",
-    },
-    {
-        name: "Microsoft Certified: Azure Fundamentals",
+        name: "Career Essentials in Business Analysis by Microsoft",
         issuer: "Microsoft",
         year: "Jul 2025",
         link: "#",
     },
     {
-        name: "Data Science: Advanced Excel and Power BI",
-        issuer: "Government of Dubai",
-        year: "Aug 2024",
+        name: "Deloitte Australia - Data Analytics Job Simulation",
+        issuer: "Deloitte",
+        year: "Jul 2025",
         link: "#",
     },
     {
-        name: "AWS Certified: Data Analytics with Big Data",
-        issuer: "AWS",
-        year: "Jul 2023",
-        link: "#",
-    },
-    {
-        name: "Data Analytics with Deep Learning",
-        issuer: "National University of Singapore (NUS)",
-        year: "Jul 2023",
-        link: "#",
-    },
-    {
-        name: "Microsoft Certified: Security, Compliance and Identity Fundamentals",
+        name: "Introduction to end-to-end analytics using Microsoft Fabric",
         issuer: "Microsoft",
-        year: "Jul 2023",
+        year: "Jul 2025",
+        link: "#",
+    },
+    {
+        name: "AWS Educate Introduction to Generative AI",
+        issuer: "Amazon Web Services (AWS)",
+        year: "Aug 2025",
         link: "#",
     },
 ];
