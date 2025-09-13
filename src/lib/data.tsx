@@ -1,10 +1,11 @@
 
-import { Certification, Experience, NavItem, PersonalData, CategorizedSkill } from "./types";
-import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet } from "lucide-react";
+import { Certification, Experience, NavItem, PersonalData, CategorizedSkill, Education } from "./types";
+import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet, GraduationCap } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon, FigmaIcon } from "@/components/common/Icons";
 
 export const navItems: NavItem[] = [
     { name: "About", href: "#about" },
+    { name: "Education", href: "#education" },
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
@@ -24,6 +25,27 @@ export const personalData: PersonalData = {
         linkedin: "https://linkedin.com/in/sai-r-kasi/",
     }
 };
+
+export const educationData: Education[] = [
+    {
+        school: "University of Windsor",
+        degree: "Masters in Applied Computing with specialization in AI",
+        duration: "Sept 2024 - May 2026",
+        location: "Windsor, Canada",
+    },
+    {
+        school: "Vellore Institute of Technology, Vellore",
+        degree: "Bachelors of Technology in Computer Science Core",
+        duration: "Sept 2020 - Aug 2024",
+        location: "Vellore, India",
+    },
+    {
+        school: "GEMS Our Own English High School",
+        degree: "High School (Class 1-12)",
+        duration: "",
+        location: "Dubai, UAE"
+    }
+];
 
 export const experienceData: Experience[] = [
     {

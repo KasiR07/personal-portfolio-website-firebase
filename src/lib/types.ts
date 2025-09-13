@@ -28,6 +28,14 @@ export type Experience = {
   location: string;
 };
 
+export type Education = {
+  school: string;
+  degree: string;
+  duration: string;
+  description?: string;
+  location: string;
+};
+
 export type Project = {
   id: string;
   name: string;
