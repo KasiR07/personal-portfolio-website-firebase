@@ -1,3 +1,4 @@
+
 import { Certification, Experience, NavItem, PersonalData, Project, Skill } from "./types";
 import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon } from "@/components/common/Icons";
@@ -25,6 +26,14 @@ export const personalData: PersonalData = {
 };
 
 export const experienceData: Experience[] = [
+    {
+        company: "MealLens Inc",
+        company_link: "#",
+        role: "Full Stack Intern",
+        duration: "May 2025 – August 2025",
+        description: "Developed a modular admin dashboard using React, TypeScript, and Vite, cutting build time by 40% via component reuse, CI/CD integration, and clean architecture patterns for future-ready CMS or analytics systems. Engineered schema-based validation with React Hook Form using Zod & Yup, cutting form bugs by 65% via controlled inputs, debounced side effects, and modular rule enforcement aligned with object-oriented principles. Built accessible UI using Tailwind CSS & ShadCN UI, applying utility classes, semantic HTML, and break point design, enabling responsive behavior across 15+ screens and supporting cross-platform development on Linux. Isolated frontend logic using hooks and services to boost modularity, maintainability, and onboarding by 30%.",
+        location: "Ontario"
+    },
     {
         company: "Sharaf DG",
         company_link: "#",
