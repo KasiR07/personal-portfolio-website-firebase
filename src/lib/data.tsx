@@ -14,7 +14,7 @@ export const navItems: NavItem[] = [
 
 export const personalData: PersonalData = {
     name: "N. V. Sai Ruthvik Kasi",
-    role: "Data Scientist & AI Enthusiast",
+    role: "Data Scientist, AI Enthusiast, Vibe Coder",
     intro: "A dedicated and detail-oriented professional with a passion for leveraging data to drive impactful business solutions.",
     about: "Driven by a passion for uncovering insights from data, I am a meticulous and innovative Data Scientist with a strong foundation in statistical analysis and machine learning. My journey in tech has been fueled by a relentless curiosity and a desire to solve real-world problems.\n\nI thrive in collaborative environments and am dedicated to leveraging my skills in Python, R, and various AI frameworks to build robust models and data-driven products. I am constantly exploring new technologies to stay at the forefront of the ever-evolving field of artificial intelligence.",
     avatar: "/kasi-aws.jpeg",
@@ -186,17 +186,17 @@ export const skillsData: CategorizedSkill[] = [
 
 export const certificationsData: Certification[] = [
     {
-        name: "AWS Educate Introduction to Generative AI",
-        issuer: "Amazon Web Services (AWS)",
-        year: "Aug 2025",
-        link: "#",
-    },
-    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
         link: "#",
         highlight: true,
+    },
+    {
+        name: "AWS Educate Introduction to Generative AI",
+        issuer: "Amazon Web Services (AWS)",
+        year: "Aug 2025",
+        link: "#",
     },
     {
         name: "Microsoft Certified: Azure Fundamentals",
