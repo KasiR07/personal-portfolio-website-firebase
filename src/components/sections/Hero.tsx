@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const Hero = () => {
   const roles = personalData.role.split(',').map(role => role.trim());
@@ -42,8 +42,8 @@ const Hero = () => {
     <section id="home" className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff20_1px,transparent_1px)]"></div>
 
-        <div className="container relative z-10 flex min-h-[calc(100vh-4rem)] items-center justify-center py-20">
-            <div className="flex flex-col items-center text-center max-w-4xl">
+        <div className="container relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-16 py-20 lg:grid-cols-2">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
                 <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
                     {personalData.name}
                 </h1>
@@ -53,7 +53,7 @@ const Hero = () => {
                 <p className="mt-6 max-w-2xl text-lg text-foreground/80 md:text-xl">
                     {personalData.intro}
                 </p>
-                <div className="mt-10 flex flex-wrap justify-center gap-4">
+                <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
                     <Button asChild size="lg" className="font-semibold">
                       <Link href="#projects">View My Work</Link>
                     </Button>
@@ -61,6 +61,23 @@ const Hero = () => {
                       <Link href="#contact">Contact Me</Link>
                     </Button>
                 </div>
+            </div>
+             <div className="hidden justify-center lg:flex">
+                 <div className="relative w-80 h-80 group">
+                    <div className="overflow-hidden w-full h-full rounded-full shadow-2xl">
+                      <Image
+                        src={personalData.avatar}
+                        alt={personalData.name}
+                        width={400}
+                        height={400}
+                        className="object-cover object-top w-full h-full"
+                        data-ai-hint="professional headshot"
+                        priority
+                      />
+                    </div>
+                    <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/10 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:translate-x-4"></div>
+                    <div className="absolute -top-6 -right-6 w-40 h-40 bg-accent/20 rounded-full blur-2xl -z-10 transition-transform duration-500 ease-in-out group-hover:-translate-x-4"></div>
+                 </div>
             </div>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
