@@ -18,10 +18,10 @@ export default function Home() {
         <About />
         <Education />
         <Experience />
-        <VolunteerExperience />
         <Projects />
         <Skills />
         <Certifications />
+        <VolunteerExperience />
       </main>
       <Footer />
     </div>
