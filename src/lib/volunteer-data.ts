@@ -23,7 +23,23 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         role: "Community Volunteer",
         duration: "June 2025 – Present",
         description: "I assist in initiatives aimed at promoting cybersecurity awareness and education within the community, contributing to open-source projects and helping to organize security-focused events.",
-        location: "Remote"
+        location: "Windsor, ON"
+    },
+    {
+        company: "Canadian Cancer Society",
+        company_link: "#",
+        role: "Volunteer",
+        duration: "Present",
+        description: "Details about your role and contributions at the Canadian Cancer Society.",
+        location: "Windsor, ON"
+    },
+    {
+        company: "Whamburg",
+        company_link: "#",
+        role: "Food Server Volunteer",
+        duration: "Present",
+        description: "Details about your role and contributions as a food server volunteer at Whamburg.",
+        location: "Windsor, ON"
     },
     {
         company: "Uddeshya (NGO)",
