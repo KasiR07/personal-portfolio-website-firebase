@@ -18,8 +18,8 @@ export const personalData: PersonalData = {
     avatar: "https://picsum.photos/seed/avatar1/400/400",
     contact: {
         email: "alex.doe@email.com",
-        github: "https://github.com",
-        linkedin: "https://linkedin.com/in/",
+        github: "https://github.com/KasiR07",
+        linkedin: "https://linkedin.com/in/sai-r-kasi/",
     }
 };
 
