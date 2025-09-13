@@ -1,4 +1,5 @@
 
+
 import { Certification, Experience, NavItem, PersonalData, CategorizedSkill, Education } from "./types";
 import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet, GraduationCap } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon, FigmaIcon } from "@/components/common/Icons";
@@ -272,4 +273,12 @@ export const certificationsData: Certification[] = [
         link: "#",
         highlight: true,
     },
+    {
+        name: "Academic Excellence (94% in CBSE Boards)",
+        issuer: "GEMS Our Own English High School, Fujairah",
+        year: "Apr 2020",
+        link: "#",
+        highlight: true,
+    },
 ];
+
