@@ -153,8 +153,6 @@ export const skillsData: CategorizedSkill[] = [
         category: "Web Frameworks & Libraries",
         skills: [
             { name: "React.js", icon: <Code /> },
-            { name: "Vue.js", icon: <Code /> },
-            { name: "Next.js", icon: <Code /> },
             { name: "HTML", icon: <Code /> },
             { name: "CSS", icon: <Code /> },
             { name: "JavaFX", icon: <Code /> },
