@@ -2,14 +2,6 @@ import type { VolunteerExperience } from "./types";
 
 export const volunteerExperienceData: VolunteerExperience[] = [
     {
-        company: "University of Windsor",
-        company_link: "#",
-        role: "Crowd Control Volunteer (Celebration of Nations)",
-        duration: "Mar 2025",
-        description: "As a volunteer for Celebration of Nations, I was assigned the role of crowd control, ensuring the smooth movement of attendees and assisting in maintaining a welcoming and organized environment. This experience allowed me to engage with people from diverse cultural backgrounds, learning about their traditions, languages, and perspectives, which deepened my appreciation for global diversity and cross-cultural exchange.",
-        location: "Windsor, ON"
-    },
-     {
         company: "GDG Windsor",
         company_link: "#",
         role: "Community Volunteer",
@@ -26,6 +18,14 @@ export const volunteerExperienceData: VolunteerExperience[] = [
         location: "Windsor, ON"
     },
     {
+        company: "University of Windsor",
+        company_link: "#",
+        role: "Crowd Control Volunteer (Celebration of Nations)",
+        duration: "Mar 2025",
+        description: "As a volunteer for Celebration of Nations, I was assigned the role of crowd control, ensuring the smooth movement of attendees and assisting in maintaining a welcoming and organized environment. This experience allowed me to engage with people from diverse cultural backgrounds, learning about their traditions, languages, and perspectives, which deepened my appreciation for global diversity and cross-cultural exchange.",
+        location: "Windsor, ON"
+    },
+     {
         company: "Canadian Cancer Society",
         company_link: "#",
         role: "Volunteer",
