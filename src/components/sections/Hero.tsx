@@ -42,9 +42,26 @@ const Hero = () => {
     <section id="home" className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] dark:bg-[radial-gradient(#ffffff20_1px,transparent_1px)]"></div>
 
-        <div className="container relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-16 py-20 lg:grid-cols-2">
+        <div className="container relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-8 py-16 lg:grid-cols-2 lg:gap-16">
+            <div className="flex justify-center lg:hidden">
+                 <div className="relative w-64 h-64 group">
+                    <div className="overflow-hidden w-full h-full rounded-full shadow-2xl">
+                      <Image
+                        src={personalData.avatar}
+                        alt={personalData.name}
+                        width={300}
+                        height={300}
+                        className="object-cover object-top w-full h-full"
+                        data-ai-hint="professional headshot"
+                        priority
+                      />
+                    </div>
+                    <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full blur-2xl -z-10"></div>
+                    <div className="absolute -top-4 -right-4 w-32 h-32 bg-accent/20 rounded-full blur-2xl -z-10"></div>
+                 </div>
+            </div>
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-                <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+                <h1 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
                     {personalData.name}
                 </h1>
                 <p className="mt-4 text-lg font-medium text-primary sm:text-xl md:text-2xl min-h-[2.25rem] md:min-h-[2.5rem]">
@@ -80,7 +97,7 @@ const Hero = () => {
                  </div>
             </div>
         </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
             <a href="#about" aria-label="Scroll to about section">
                 <ArrowDown className="h-6 w-6 text-muted-foreground" />
             </a>
