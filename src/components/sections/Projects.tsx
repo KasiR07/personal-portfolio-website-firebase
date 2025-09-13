@@ -36,7 +36,7 @@ const Projects = () => {
         
         const filteredProjects = githubProjects.filter(repo => !projectsToExclude.includes(repo.name));
 
-        const mappedProjects: Project[] = filteredProjects.map((repo: GithubRepo, index: number) => ({
+        const mappedProjects: Project[] = filteredProjects.map((repo: GithubRepo) => ({
           id: repo.id.toString(),
           name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
           description: repo.description || 'No description available.',
