@@ -1,20 +1,44 @@
 import type { VolunteerExperience } from "./types";
 
 export const volunteerExperienceData: VolunteerExperience[] = [
-    {
-        company: "Awesome Foundation",
+     {
+        company: "GDG Windsor",
         company_link: "#",
         role: "Community Volunteer",
-        duration: "June 2023 – Present",
-        description: "Contributed to community-building activities and helped organize local events. Collaborated with a team of volunteers to manage logistics and ensure the smooth execution of various initiatives. This role involved community outreach, event planning, and on-the-ground support.",
+        duration: "June 2025 – Present",
+        description: "As a community volunteer, I contribute to organizing events, workshops, and meetups for the Google Developer Group in Windsor, fostering a collaborative environment for developers and tech enthusiasts.",
+        location: "Windsor, ON"
+    },
+    {
+        company: "SWOCTS- Open CyberSec",
+        company_link: "#",
+        role: "Community Volunteer",
+        duration: "June 2025 – Present",
+        description: "I assist in initiatives aimed at promoting cybersecurity awareness and education within the community, contributing to open-source projects and helping to organize security-focused events.",
         location: "Remote"
     },
-     {
+    {
         company: "Uddeshya (NGO)",
         company_link: "#",
-        role: "Web Dev Member",
-        duration: "January 2023 – April 2023",
-        description: "Constructed a multi-page event site using HTML, CSS, Bootstrap, and JS with responsive UI design, increasing mobile retention by 38%, reducing bounce by 26%, and aligning structure to modular layout practices. Integrated jQuery & AOS for scroll-based transitions on 30+ sections, extending time-on-page by 2.4x via smoother UI animations, interactive effects, and improved UX across mobile and low-bandwidth platforms. Designed UI paths with archive, media gallery, and timeline modules leveraging React.js, increasing engagement by 40% through intuitive navigation, modular design patterns, and optimized signal flow across user routes. Deployed via Vercel CI/CD with GitHub and Next.js, cutting rollbacks by 70% and boosting release confidence.",
+        role: "President",
+        duration: "Jan 2023 - Jan 2024",
+        description: "As the chairperson, I led outreach programs in orphanages and old age homes, directed seminars on critical social issues, and organized environmental conservation efforts. A key initiative was a candle march for victims of sexual violence, fostering teamwork and advancing our mission of social upliftment.",
+        location: "Vellore, Tamil Nadu, India"
+    },
+    {
+        company: "Uddeshya (NGO)",
+        company_link: "#",
+        role: "Head of Design Department",
+        duration: "Apr 2022 - Jan 2023",
+        description: "I led the creative vision, overseeing brand identity and visual storytelling. I collaborated with a team to design impactful logos, digital and print content, and promotional materials to resonate with our audience and drive involvement.",
+        location: "Vellore, Tamil Nadu, India"
+    },
+    {
+        company: "Uddeshya (NGO)",
+        company_link: "#",
+        role: "Core Committee Member",
+        duration: "Dec 2020 - Apr 2022",
+        description: "I engaged in planning, implementing, and evaluating projects to improve community welfare. I contributed to educational programs, awareness campaigns, and resource distribution to drive meaningful change, embodying our slogan: Empowering Youth, Fueling Change.",
         location: "India"
     },
 ];
