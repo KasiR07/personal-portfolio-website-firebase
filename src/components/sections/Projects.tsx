@@ -9,6 +9,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { Wand2, Loader2, Github } from 'lucide-react';
+import { personalData } from '@/lib/data';
 
 const Projects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -21,20 +22,18 @@ const Projects = () => {
       try {
         const githubProjects = await getGithubProjectsAction();
 
-        const projectsToExclude = [
-          'ultimate-lookups-guide',
-          'digital-forensics',
-          'aurdino-minigame',
-          'arduino-minigame',
-          'portfolio-website',
-          'chatbot-baisc',
-          'chatbot-basic',
-          'imp-formulas-for-data-analaytics',
-          'data-cleaning',
-          'ui-ux-education-portal'
+        const projectsToInclude = [
+          'genre-classification-system',
+          'Google-Cloud-Agentverse-Data-Engineer',
+          'AES-Image-Encryption',
+          'AI-Driven-Career-Guidance-System',
+          'Housing-Price-Prediction-System',
+          'Deciphering-Narratives-AI-Driven-Storytelling-with-User-Centric-NLP-Dialogue',
+          'Content-Based-Image-Retrieval',
+          'Client-Server-DFS-in-Linux'
         ];
         
-        const filteredProjects = githubProjects.filter(repo => !projectsToExclude.includes(repo.name));
+        const filteredProjects = githubProjects.filter(repo => projectsToInclude.includes(repo.name));
 
         const mappedProjects: Project[] = filteredProjects.map((repo: GithubRepo) => ({
           id: repo.id.toString(),
@@ -152,6 +151,14 @@ const Projects = () => {
             ))}
           </div>
         )}
+
+        <div className="mt-12 text-center">
+            <Button asChild variant="outline" size="lg">
+                <a href={personalData.contact.github} target="_blank" rel="noopener noreferrer">
+                    View More on GitHub
+                </a>
+            </Button>
+        </div>
       </div>
     </section>
   );
