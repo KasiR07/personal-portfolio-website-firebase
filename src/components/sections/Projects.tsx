@@ -97,7 +97,7 @@ const Projects = () => {
         
         {isLoading ? (
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {Array.from({ length: 3 }).map((_, i) => (
+            {Array.from({ length: 9 }).map((_, i) => (
               <Card key={i} className="flex flex-col overflow-hidden">
                 <CardHeader className="p-0">
                   <div className="aspect-video relative bg-muted animate-pulse"></div>
