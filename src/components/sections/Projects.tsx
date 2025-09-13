@@ -20,7 +20,23 @@ const Projects = () => {
       setIsLoading(true);
       try {
         const githubProjects = await getGithubProjectsAction();
-        const mappedProjects: Project[] = githubProjects.map((repo: GithubRepo, index: number) => ({
+
+        const projectsToExclude = [
+          'ultimate-lookups-guide',
+          'digital-forensics',
+          'aurdino-minigame',
+          'portfolio-website',
+          'chatbot-baisc',
+          'imp-formulas-for-data-analaytics',
+          'data-cleaning',
+          'ui-ux-education-portal',
+          'arduino-minigame',
+          'chatbot-basic'
+        ];
+        
+        const filteredProjects = githubProjects.filter(repo => !projectsToExclude.includes(repo.name));
+
+        const mappedProjects: Project[] = filteredProjects.map((repo: GithubRepo, index: number) => ({
           id: repo.id.toString(),
           name: repo.name.replace(/-/g, ' ').replace(/_/g, ' '),
           description: repo.description || 'No description available.',
