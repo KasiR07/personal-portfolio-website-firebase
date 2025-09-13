@@ -7,6 +7,7 @@ export const navItems: NavItem[] = [
     { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
     { name: "Skills", href: "#skills" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -99,15 +100,39 @@ export const skillsData: Skill[] = [
 
 export const certificationsData: Certification[] = [
     {
-        name: "AWS Certified Machine Learning - Specialty",
-        issuer: "Amazon Web Services",
-        year: "2022",
+        name: "Databricks Fundamentals Accreditation",
+        issuer: "Databricks",
+        year: "Aug 2025",
         link: "#",
     },
     {
-        name: "TensorFlow Developer Certificate",
-        issuer: "Google",
-        year: "2021",
+        name: "Microsoft Certified: Azure Fundamentals",
+        issuer: "Microsoft",
+        year: "Jul 2025",
+        link: "#",
+    },
+    {
+        name: "Data Science: Advanced Excel and Power BI",
+        issuer: "Government of Dubai",
+        year: "Aug 2024",
+        link: "#",
+    },
+    {
+        name: "AWS Certified: Data Analytics with Big Data",
+        issuer: "AWS",
+        year: "Jul 2023",
+        link: "#",
+    },
+    {
+        name: "Data Analytics with Deep Learning",
+        issuer: "National University of Singapore (NUS)",
+        year: "Jul 2023",
+        link: "#",
+    },
+    {
+        name: "Microsoft Certified: Security, Compliance and Identity Fundamentals",
+        issuer: "Microsoft",
+        year: "Jul 2023",
         link: "#",
     },
 ];
