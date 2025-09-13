@@ -25,13 +25,13 @@ const Projects = () => {
           'ultimate-lookups-guide',
           'digital-forensics',
           'aurdino-minigame',
+          'arduino-minigame',
           'portfolio-website',
           'chatbot-baisc',
+          'chatbot-basic',
           'imp-formulas-for-data-analaytics',
           'data-cleaning',
-          'ui-ux-education-portal',
-          'arduino-minigame',
-          'chatbot-basic'
+          'ui-ux-education-portal'
         ];
         
         const filteredProjects = githubProjects.filter(repo => !projectsToExclude.includes(repo.name));
