@@ -26,6 +26,13 @@ export const personalData: PersonalData = {
 
 export const experienceData: Experience[] = [
     {
+        company: "Sharaf DG",
+        company_link: "#",
+        role: "Data Analyst Intern",
+        duration: "Feb 2024 - Aug 2024",
+        description: "Processed 50,000+ energy records using pandas, SQL & Excel, applying data cleaning techniques to reduce raw data errors by 35% & decrease preparation time by 40% for weekly performance & yield reports across regions. Developed over 12 automated ETL pipelines for data engineering to process sensor data from 200+ solar panels, decreasing manual data handling by 85% and enabling 24/7 live updates for energy monitoring dashboards. Designed 30+ Power BI dashboards for data visualization, used weekly by 6 departments, reducing report generation time by 60% and increasing insight visibility on panel efficiency, downtime, and predicted performance. Flagged 40+ system fault patterns with O&M through anomaly detection techniques, reducing downtime."
+    },
+    {
         company: "Innovate AI",
         company_link: "#",
         role: "Senior Data Scientist",
