@@ -15,7 +15,7 @@ export const navItems: NavItem[] = [
 export const personalData: PersonalData = {
     name: "N. V. Sai Ruthvik Kasi",
     role: "Data Scientist & AI Enthusiast",
-    intro: "Crafting intelligent solutions from complex data. I specialize in machine learning, data analysis, and building AI-driven applications.",
+    intro: "A dedicated and detail-oriented professional with a passion for leveraging data to drive impactful business solutions.",
     about: "Driven by a passion for uncovering insights from data, I am a meticulous and innovative Data Scientist with a strong foundation in statistical analysis and machine learning. My journey in tech has been fueled by a relentless curiosity and a desire to solve real-world problems.\n\nI thrive in collaborative environments and am dedicated to leveraging my skills in Python, R, and various AI frameworks to build robust models and data-driven products. I am constantly exploring new technologies to stay at the forefront of the ever-evolving field of artificial intelligence.",
     avatar: "/kasi-aws.jpeg",
     contact: {
@@ -73,6 +73,14 @@ export const experienceData: Experience[] = [
         duration: "October 2021 – January 2022",
         description: "Implemented responsive apps using HTML, CSS, JS & Bootstrap across 20+ devices, reducing UI bugs 50% by fixing pixel misalignments, adjusting viewports, and QA testing in Linux-based development environments. Constructed async API integrations via Node.js & PHP REST routes, boosting backend connectivity by 35% using modular route separation, error handling, and clean JSON parsing for structured system integration. Leveraged MongoDB for data operations across 3+ modules, cutting query latency 25% by indexing keys, applying schema validations, and designing optimized collection structures with embedded logs & projections. Debugged frontend bottlenecks using Vite, cut load by 2.3s, improved Lighthouse via tests, compression, & defer.",
         location: "Remote"
+    },
+    {
+        company: "Miramar Al Aqah Beach Resort",
+        company_link: "#",
+        role: "Database Administrator",
+        duration: "Dec 2018 - Jan 2019",
+        description: "During my time at Miramar, I was responsible for managing and maintaining internal databases that tracked customer interactions, sales transactions, and inventory records. I regularly updated records to ensure accuracy and consistency, which played a critical role in supporting smooth day-to-day operations. My role involved routine data validation, performing error checks, and resolving discrepancies to uphold data integrity. I collaborated closely with the operations and finance teams to generate reports for performance tracking and business decision-making. I used tools like Microsoft Excel and basic SQL queries to extract, clean, and analyze data. Additionally, I assisted in implementing regular backup procedures and supported data privacy compliance efforts.",
+        location: "Fujairah Emirate, United Arab Emirates"
     }
 ];
 
