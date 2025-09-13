@@ -1,7 +1,7 @@
 
 'use client';
 
-import { BrainCircuit, Menu, Search, X } from 'lucide-react';
+import { BrainCircuit, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { navItems } from '@/lib/data.tsx';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -10,17 +10,10 @@ import { useState, useEffect } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { Input } from '../ui/input';
 
-type HeaderProps = {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
-};
-
-const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('#home');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -61,11 +54,6 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
     }
   };
 
-  const clearSearch = () => {
-    onSearchChange('');
-    setIsSearchOpen(false);
-  }
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -75,7 +63,7 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           </Link>
         </div>
 
-        <nav className={cn("hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium", isSearchOpen && 'md:hidden' )}>
+        <nav className="hidden md:flex flex-1 justify-center items-center space-x-1 text-sm font-medium">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -93,34 +81,9 @@ const Header = ({ searchQuery, onSearchChange }: HeaderProps) => {
           ))}
         </nav>
 
-        <div className={cn("flex items-center justify-end flex-1 md:flex-none", isSearchOpen && 'w-full')}>
-            <div className={cn("w-full max-w-sm hidden", (isSearchOpen || searchQuery) && 'block', 'md:block')}>
-              <div className="relative">
-                <Input
-                  type="search"
-                  placeholder="Search portfolio..."
-                  className="w-full pl-10"
-                  value={searchQuery}
-                  onChange={(e) => onSearchChange(e.target.value)}
-                  onFocus={() => setIsSearchOpen(true)}
-                  onBlur={() => !searchQuery && setIsSearchOpen(false)}
-                />
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                {searchQuery && (
-                  <Button variant="ghost" size="icon" className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7" onClick={clearSearch}>
-                    <X className="h-4 w-4" />
-                  </Button>
-                )}
-              </div>
-            </div>
-            {!searchQuery && (
-              <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsSearchOpen(!isSearchOpen)}>
-                {isSearchOpen ? <X className="h-5 w-5"/> : <Search className="h-5 w-5" />}
-                <span className="sr-only">Toggle Search</span>
-              </Button>
-            )}
+        <div className="flex items-center justify-end flex-1 md:flex-none">
             <ThemeToggle />
-            <div className={cn("md:hidden", isSearchOpen && "hidden")}>
+            <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon">

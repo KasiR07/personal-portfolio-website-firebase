@@ -1,7 +1,5 @@
-
 'use client';
 
-import { useState } from 'react';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import Hero from '@/components/sections/Hero';
@@ -14,19 +12,18 @@ import Skills from '@/components/sections/Skills';
 import Certifications from '@/components/sections/Certifications';
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('');
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
+      <Header />
       <main className="flex-grow">
         <Hero />
         <About />
         <Education />
         <Experience />
-        <Projects searchQuery={searchQuery} />
+        <Projects />
         <Skills />
-        <Certifications searchQuery={searchQuery} />
+        <Certifications />
         <VolunteerExperience />
       </main>
       <Footer />

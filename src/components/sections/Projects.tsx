@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState, useTransition, useEffect, useMemo } from 'react';
+import { useState, useTransition, useEffect } from 'react';
 import type { Project, GithubRepo } from '@/lib/types';
 import { reorderProjectsAction } from '@/app/actions';
 import { getGithubProjectsAction } from '@/app/actions';
@@ -12,11 +12,8 @@ import Image from 'next/image';
 import { Wand2, Loader2, Github } from 'lucide-react';
 import { personalData } from '@/lib/data';
 
-type ProjectsProps = {
-  searchQuery: string;
-};
 
-const Projects = ({ searchQuery }: ProjectsProps) => {
+const Projects = () => {
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [displayedProjects, setDisplayedProjects] = useState<Project[]>([]);
   const [isPending, startTransition] = useTransition();
@@ -47,19 +44,6 @@ const Projects = ({ searchQuery }: ProjectsProps) => {
     fetchProjects();
   }, []);
 
-  const filteredProjects = useMemo(() => {
-    if (!searchQuery) {
-      return displayedProjects;
-    }
-    return displayedProjects.filter(project => {
-      const searchLower = searchQuery.toLowerCase();
-      const nameMatch = project.name.toLowerCase().includes(searchLower);
-      const descriptionMatch = project.description.toLowerCase().includes(searchLower);
-      const techMatch = project.technologies.some(tech => tech.toLowerCase().includes(searchLower));
-      return nameMatch || descriptionMatch || techMatch;
-    });
-  }, [searchQuery, displayedProjects]);
-
   const handleAiReorder = () => {
     startTransition(async () => {
       const projectsToReorder = displayedProjects.map(p => ({
@@ -82,10 +66,7 @@ const Projects = ({ searchQuery }: ProjectsProps) => {
       const newDisplayedProjects = [...uniqueReorderedProjects, ...remainingProjects];
       setDisplayedProjects(newDisplayedProjects);
 
-      // Also update the base list of projects if no search is active
-      if (!searchQuery) {
-        setAllProjects(newDisplayedProjects);
-      }
+      setAllProjects(newDisplayedProjects);
     });
   };
 
@@ -126,9 +107,9 @@ const Projects = ({ searchQuery }: ProjectsProps) => {
               </Card>
             ))}
           </div>
-        ) : filteredProjects.length > 0 ? (
+        ) : displayedProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
+            {displayedProjects.map((project) => (
               <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20">
                 <CardHeader className="p-0">
                   <div className="aspect-video relative">
@@ -165,7 +146,7 @@ const Projects = ({ searchQuery }: ProjectsProps) => {
             ))}
           </div>
         ) : (
-          <p className="text-center text-muted-foreground col-span-full">No projects found matching your search.</p>
+          <p className="text-center text-muted-foreground col-span-full">No projects found.</p>
         )}
 
         <div className="mt-12 text-center">
