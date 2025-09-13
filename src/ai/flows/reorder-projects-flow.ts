@@ -1,31 +1,15 @@
-// use server'
+'use server'
 
 /**
  * @fileOverview Uses generative AI to reorder projects based on name, description, and technologies.
  *
  * - reorderProjects - A function that reorders projects.
- * - ReorderProjectsInput - The input type for the reorderProjects function.
- * - ReorderProjectsOutput - The return type for the reorderProjects function.
  */
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { ReorderProjectsInputSchema, ReorderProjectsOutputSchema, ReorderProjectsInput, ReorderProjectsOutput } from '@/lib/types';
 
-const ProjectSchema = z.object({
-  name: z.string().describe('The name of the project.'),
-  description: z.string().describe('A detailed description of the project.'),
-  technologies: z.array(z.string()).describe('An array of technologies used in the project.'),
-});
-
-export type Project = z.infer<typeof ProjectSchema>;
-
-const ReorderProjectsInputSchema = z.object({
-  projects: z.array(ProjectSchema).describe('An array of projects to reorder.'),
-});
-export type ReorderProjectsInput = z.infer<typeof ReorderProjectsInputSchema>;
-
-const ReorderProjectsOutputSchema = z.array(ProjectSchema);
-export type ReorderProjectsOutput = z.infer<typeof ReorderProjectsOutputSchema>;
 
 export async function reorderProjects(input: ReorderProjectsInput): Promise<ReorderProjectsOutput> {
   return reorderProjectsFlow(input);
