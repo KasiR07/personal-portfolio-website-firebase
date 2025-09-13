@@ -78,7 +78,7 @@ const Hero = () => {
                       <Link href="#contact">Contact Me</Link>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="font-semibold">
-                      <a href="/resume.pdf" download>Download Resume</a>
+                      <a href="https://www.overleaf.com/read/zrrtcvmctbsf#5fad1a" target="_blank" rel="noopener noreferrer">View Resume</a>
                     </Button>
                 </div>
             </div>
