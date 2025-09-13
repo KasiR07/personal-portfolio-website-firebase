@@ -32,7 +32,7 @@ export const experienceData: Experience[] = [
         role: "Full Stack Intern",
         duration: "May 2025 – August 2025",
         description: "Developed a modular admin dashboard using React, TypeScript, and Vite, cutting build time by 40% via component reuse, CI/CD integration, and clean architecture patterns for future-ready CMS or analytics systems. Engineered schema-based validation with React Hook Form using Zod & Yup, cutting form bugs by 65% via controlled inputs, debounced side effects, and modular rule enforcement aligned with object-oriented principles. Built accessible UI using Tailwind CSS & ShadCN UI, applying utility classes, semantic HTML, and break point design, enabling responsive behavior across 15+ screens and supporting cross-platform development on Linux. Isolated frontend logic using hooks and services to boost modularity, maintainability, and onboarding by 30%.",
-        location: "Ontario"
+        location: "Windsor, Canada"
     },
     {
         company: "Sharaf DG",
@@ -56,7 +56,7 @@ export const experienceData: Experience[] = [
         role: "Data Analyst Intern",
         duration: "May 2023 – July 2023",
         description: "Engineered a full-stack analytics platform for NYC bike data using React.js and Flask, enabling live query processing, API routing, and client-side interactivity for multi-dimensional data exploration across 100K+ records. Analyzed trip logs using Python & Tableau to extract hourly usage trends, station-wise output, and demographic segmentation, improving visual precision by 38% via data preprocessing, filtering layers, and aggregate metrics. Integrated Tableau dashboards into the app interface for rendering, applying live data filtering and backend triggers to automate data refresh cycles, improving analytical response time by 45% during multi-slice queries. Deployed front-end components for station-wise analysis, connecting to Flask endpoints for asynchronous rendering and map-based metrics display, advancing mobility trend inputs by 40% using geographic data alignment.",
-        location: "Hyderabad, India"
+        location: "Remote"
     },
     {
         company: "Uddeshya (NGO)",
@@ -72,7 +72,7 @@ export const experienceData: Experience[] = [
         role: "Software Dev Intern",
         duration: "October 2021 – January 2022",
         description: "Implemented responsive apps using HTML, CSS, JS & Bootstrap across 20+ devices, reducing UI bugs 50% by fixing pixel misalignments, adjusting viewports, and QA testing in Linux-based development environments. Constructed async API integrations via Node.js & PHP REST routes, boosting backend connectivity by 35% using modular route separation, error handling, and clean JSON parsing for structured system integration. Leveraged MongoDB for data operations across 3+ modules, cutting query latency 25% by indexing keys, applying schema validations, and designing optimized collection structures with embedded logs & projections. Debugged frontend bottlenecks using Vite, cut load by 2.3s, improved Lighthouse via tests, compression, & defer.",
-        location: "India"
+        location: "Remote"
     }
 ];
 
