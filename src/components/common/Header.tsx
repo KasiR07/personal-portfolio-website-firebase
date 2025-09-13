@@ -2,7 +2,7 @@
 
 import { BrainCircuit } from 'lucide-react';
 import Link from 'next/link';
-import { navItems } from '@/lib/data';
+import { navItems } from '@/lib/data.tsx';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
@@ -18,7 +18,6 @@ const Header = () => {
         <div className="flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <BrainCircuit className="h-6 w-6 text-primary" />
-            <span className="font-bold font-headline">Data Canvas</span>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) => (
