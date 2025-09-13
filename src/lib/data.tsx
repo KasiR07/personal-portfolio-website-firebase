@@ -18,7 +18,7 @@ export const personalData: PersonalData = {
     about: "Driven by a passion for uncovering insights from data, I am a meticulous and innovative Data Scientist with a strong foundation in statistical analysis and machine learning. My journey in tech has been fueled by a relentless curiosity and a desire to solve real-world problems.\n\nI thrive in collaborative environments and am dedicated to leveraging my skills in Python, R, and various AI frameworks to build robust models and data-driven products. I am constantly exploring new technologies to stay at the forefront of the ever-evolving field of artificial intelligence.",
     avatar: "https://picsum.photos/seed/avatar1/400/400",
     contact: {
-        email: "alex.doe@email.com",
+        email: "sairkasi792@gmail.com",
         github: "https://github.com/KasiR07",
         linkedin: "https://linkedin.com/in/sai-r-kasi/",
     }
