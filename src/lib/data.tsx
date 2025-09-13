@@ -221,7 +221,7 @@ export const certificationsData: Certification[] = [
         name: "Responsible AI with GitHub Copilot",
         issuer: "Microsoft",
         year: "Aug 2025",
-        link: "https://learn.microsoft.com/api/achievements/share/en-us/NAGAVENKATASAIRUTHVIKKASI-5469/A4W9WN87?sharingId=275C279E5C17E306",
+        link: "https://learn.microsoft.com/api/achievements/share/en-us/NagaVenkataSaiRuthvikKasi-2743/A4W9WN87?sharingId=5CC3A7AB1EF1A976",
     },
     {
         name: "AWS Educate Introduction to Generative AI",
@@ -233,7 +233,7 @@ export const certificationsData: Certification[] = [
         name: "Microsoft Certified: Azure Fundamentals",
         issuer: "Microsoft",
         year: "Jul 2025",
-        link: "https://learn.microsoft.com/en-us/users/nagavenkatasairuthvikkasi-5469/transcript/v0y23ilj91zlle8",
+        link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/FF65E6B9D85700D4?sharingId=5CC3A7AB1EF1A976",
         highlight: true,
     },
     {
@@ -252,7 +252,7 @@ export const certificationsData: Certification[] = [
         name: "Introduction to end-to-end analytics using Microsoft Fabric",
         issuer: "Microsoft",
         year: "Jul 2025",
-        link: "https://learn.microsoft.com/api/achievements/share/en-us/NAGAVENKATASAIRUTHVIKKASI-5469/XQGD27EY?sharingId=275C279E5C17E306",
+        link: "https://learn.microsoft.com/api/achievements/share/en-us/NagaVenkataSaiRuthvikKasi-2743/XQGD27EY?sharingId=5CC3A7AB1EF1A976",
     },
     {
         name: "Data Science: Advanced Excel and Power BI",
