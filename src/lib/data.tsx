@@ -196,12 +196,14 @@ export const certificationsData: Certification[] = [
         issuer: "Databricks",
         year: "Aug 2025",
         link: "#",
+        highlight: true,
     },
     {
         name: "Microsoft Certified: Azure Fundamentals",
         issuer: "Microsoft",
         year: "Jul 2025",
         link: "#",
+        highlight: true,
     },
     {
         name: "Career Essentials in Business Analysis by Microsoft",
@@ -226,6 +228,7 @@ export const certificationsData: Certification[] = [
         issuer: "Government of Dubai",
         year: "Aug 2024",
         link: "#",
+        highlight: true,
     },
     {
         name: "AWS Certified: Data Analytics with Big Data",
@@ -244,5 +247,6 @@ export const certificationsData: Certification[] = [
         issuer: "Microsoft",
         year: "Jul 2023",
         link: "#",
+        highlight: true,
     },
 ];

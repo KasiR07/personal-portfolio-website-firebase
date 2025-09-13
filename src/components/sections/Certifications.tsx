@@ -2,6 +2,7 @@ import { certificationsData } from '@/lib/data';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Award, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const Certifications = () => {
   return (
@@ -13,7 +14,10 @@ const Certifications = () => {
         </div>
         <div className="space-y-4">
           {certificationsData.map((cert, index) => (
-            <Card key={index} className="flex items-center p-4 transition-all hover:shadow-md dark:hover:shadow-primary/20">
+            <Card key={index} className={cn(
+                "flex items-center p-4 transition-all hover:shadow-md dark:hover:shadow-primary/20",
+                cert.highlight && "border-primary/50 ring-2 ring-primary/20"
+                )}>
                 <div className="flex-shrink-0 p-3 bg-primary/10 rounded-full mr-4">
                     <Award className="w-8 h-8 text-primary"/>
                 </div>

@@ -53,6 +53,7 @@ export type Certification = {
   issuer: string;
   year: string;
   link: string;
+  highlight?: boolean;
 };
 
 export type GithubRepo = {
@@ -71,7 +72,7 @@ export type GetGithubProjectsInput = z.infer<typeof GetGithubProjectsInputSchema
 
 const GithubRepoSchema = z.object({
   id: z.number(),
-  name: z.string(),
+  name: z.string().nullable(),
   description: z.string().nullable(),
   html_url: z.string().url(),
   topics: z.array(z.string()),
