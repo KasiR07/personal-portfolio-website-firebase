@@ -186,6 +186,12 @@ export const skillsData: CategorizedSkill[] = [
 
 export const certificationsData: Certification[] = [
     {
+        name: "AWS Educate Introduction to Generative AI",
+        issuer: "Amazon Web Services (AWS)",
+        year: "Aug 2025",
+        link: "#",
+    },
+    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
@@ -193,6 +199,24 @@ export const certificationsData: Certification[] = [
     },
     {
         name: "Microsoft Certified: Azure Fundamentals",
+        issuer: "Microsoft",
+        year: "Jul 2025",
+        link: "#",
+    },
+    {
+        name: "Career Essentials in Business Analysis by Microsoft",
+        issuer: "Microsoft",
+        year: "Jul 2025",
+        link: "#",
+    },
+    {
+        name: "Deloitte Australia - Data Analytics Job Simulation",
+        issuer: "Deloitte",
+        year: "Jul 2025",
+        link: "#",
+    },
+    {
+        name: "Introduction to end-to-end analytics using Microsoft Fabric",
         issuer: "Microsoft",
         year: "Jul 2025",
         link: "#",
@@ -219,30 +243,6 @@ export const certificationsData: Certification[] = [
         name: "Microsoft Certified: Security, Compliance and Identity Fundamentals",
         issuer: "Microsoft",
         year: "Jul 2023",
-        link: "#",
-    },
-    {
-        name: "Career Essentials in Business Analysis by Microsoft",
-        issuer: "Microsoft",
-        year: "Jul 2025",
-        link: "#",
-    },
-    {
-        name: "Deloitte Australia - Data Analytics Job Simulation",
-        issuer: "Deloitte",
-        year: "Jul 2025",
-        link: "#",
-    },
-    {
-        name: "Introduction to end-to-end analytics using Microsoft Fabric",
-        issuer: "Microsoft",
-        year: "Jul 2025",
-        link: "#",
-    },
-    {
-        name: "AWS Educate Introduction to Generative AI",
-        issuer: "Amazon Web Services (AWS)",
-        year: "Aug 2025",
         link: "#",
     },
 ];
