@@ -39,3 +39,9 @@ export const DockerIcon = (props: React.SVGProps<SVGSVGElement>) => (
      <path d="M22.12 7.88c-.62-3.32-3.69-5.88-7.24-5.88H8.05C4.5 2 1.43 4.56 1.05 7.88L1 8v7.5c0 1.93 1.57 3.5 3.5 3.5h15c1.93 0 3.5-1.57 3.5-3.5V8l-.88-.12zM15 8h2v2h-2V8zm-3 0h2v2h-2V8zm-3 0h2v2H9V8zM6 8h2v2H6V8zm-1.5 8c-.83 0-1.5-.67-1.5-1.5v-3h18v3c0 .83-.67 1.5-1.5 1.5h-15z"/>
   </svg>
 );
+
+export const FigmaIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-5 5a3 3 0 013-3h2v6h-2a3 3 0 01-3-3zm0 5a3 3 0 013-3h2v6h-2a3 3 0 01-3-3zm5 2a3 3 0 013-3h2v3a3 3 0 01-3 3h-2v-3zm0-5a3 3 0 013-3h2v3a3 3 0 01-3 3h-2V9z" />
+    </svg>
+);

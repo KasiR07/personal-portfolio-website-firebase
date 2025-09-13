@@ -1,6 +1,6 @@
 
 import { Certification, Experience, NavItem, PersonalData, CategorizedSkill } from "./types";
-import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings } from "lucide-react";
+import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon } from "@/components/common/Icons";
 
 export const navItems: NavItem[] = [
@@ -93,7 +93,7 @@ export const skillsData: CategorizedSkill[] = [
             { name: "SQL", icon: <Database /> },
             { name: "Java", icon: <Code /> },
             { name: "JavaScript", icon: <Code /> },
-            { name: "Matlab", icon: <Code /> },
+            { name: "Linux", icon: <Terminal /> },
         ]
     },
     {
@@ -102,7 +102,6 @@ export const skillsData: CategorizedSkill[] = [
             { name: "MySQL", icon: <Database /> },
             { name: "PostgreSQL", icon: <Database /> },
             { name: "MongoDB", icon: <Database /> },
-            { name: "Hive", icon: <Database /> },
             { name: "Snowflake", icon: <Database /> },
             { name: "Neo4j", icon: <Database /> },
             { name: "Spark", icon: <Cpu /> },
@@ -117,6 +116,7 @@ export const skillsData: CategorizedSkill[] = [
             { name: "PyTorch", icon: <PyTorchIcon /> },
             { name: "NLP", icon: <BotMessageSquare /> },
             { name: "OpenCV", icon: <Code /> },
+            { name: "Computer Vision", icon: <Video /> },
             { name: "Generative AI", icon: <BrainCircuit /> },
         ]
     },
@@ -136,6 +136,7 @@ export const skillsData: CategorizedSkill[] = [
         skills: [
             { name: "ETL", icon: <Workflow /> },
             { name: "DataOps", icon: <Settings /> },
+            { name: "MLOps", icon: <FileCog /> },
             { name: "Feature Engineering", icon: <Cpu /> },
         ]
     },
@@ -157,8 +158,8 @@ export const skillsData: CategorizedSkill[] = [
             { name: "Docker", icon: <DockerIcon /> },
             { name: "Jira", icon: <GanttChartSquare /> },
             { name: "SAS", icon: <Code /> },
-            { name: "Visio", icon: <GanttChartSquare /> },
-            { name: "AutoCAD", icon: <Code /> },
+            { name: "Excel", icon: <FileSpreadsheet /> },
+            { name: "Figma", icon: <Code /> },
         ]
     },
     {
@@ -167,6 +168,7 @@ export const skillsData: CategorizedSkill[] = [
             { name: "Business Analysis", icon: <Briefcase /> },
             { name: "Project Management", icon: <GanttChartSquare /> },
             { name: "Agile", icon: <Users /> },
+            { name: "Scrum", icon: <Users /> },
         ]
     }
 ];
