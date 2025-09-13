@@ -30,13 +30,15 @@ const Certifications = () => {
                     <CardTitle className="font-headline text-lg">{cert.name}</CardTitle>
                     <CardDescription>{cert.issuer} &middot; {cert.year}</CardDescription>
                 </div>
-                <div className="flex-shrink-0 ml-4">
-                     <Button asChild variant="ghost" size="icon">
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer" aria-label={`View certificate for ${cert.name}`}>
-                            <ExternalLink className="h-5 w-5 text-muted-foreground"/>
-                        </a>
-                    </Button>
-                </div>
+                {cert.link && cert.link !== "#" && (
+                    <div className="flex-shrink-0 ml-4">
+                        <Button asChild variant="ghost" size="icon">
+                            <a href={cert.link} target="_blank" rel="noopener noreferrer" aria-label={`View certificate for ${cert.name}`}>
+                                <ExternalLink className="h-5 w-5 text-muted-foreground"/>
+                            </a>
+                        </Button>
+                    </div>
+                )}
             </Card>
           ))}
         </div>
