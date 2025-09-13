@@ -1,3 +1,4 @@
+
 'use client';
 
 import { personalData } from '@/lib/data';
@@ -78,7 +79,7 @@ const Hero = () => {
                       <Link href="#contact">Contact Me</Link>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="font-semibold">
-                      <a href="https://www.overleaf.com/read/zrrtcvmctbsf#5fad1a" target="_blank" rel="noopener noreferrer">View Resume</a>
+                      <a href="https://drive.google.com/file/d/1KgLYP51ERKbeWCc-V5_usqFeUGsNj_EQ/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Resume</a>
                     </Button>
                 </div>
             </div>
