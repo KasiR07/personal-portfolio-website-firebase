@@ -26,7 +26,10 @@ const Projects = () => {
     <section id="projects" className="py-24 sm:py-32">
       <div className="container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
-          <h2 className="text-3xl font-headline font-bold tracking-tight text-center sm:text-4xl">My Projects</h2>
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl font-headline font-bold tracking-tight sm:text-4xl lg:text-5xl">My Projects</h2>
+            <p className="mt-2 text-muted-foreground">A selection of my recent work.</p>
+          </div>
           <Button onClick={handleAiReorder} disabled={isPending} className="flex-shrink-0">
             {isPending ? (
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -39,7 +42,7 @@ const Projects = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <Card key={project.id} className="flex flex-col overflow-hidden transition-transform hover:scale-105 hover:shadow-xl">
+            <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20">
               <CardHeader className="p-0">
                 <div className="aspect-video relative">
                   <Image
@@ -53,7 +56,7 @@ const Projects = () => {
                 </div>
               </CardHeader>
               <CardContent className="flex-grow p-6">
-                <CardTitle className="font-headline mb-2">{project.name}</CardTitle>
+                <CardTitle className="font-headline text-xl mb-2">{project.name}</CardTitle>
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (

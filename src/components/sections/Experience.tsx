@@ -7,45 +7,47 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
+import { Card } from '../ui/card';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 sm:py-32 bg-accent/50">
+    <section id="experience" className="py-24 sm:py-32 bg-accent/20">
       <div className="container max-w-5xl">
-        <h2 className="text-3xl font-headline font-bold tracking-tight text-center sm:text-4xl">Work Experience</h2>
-        <div className="relative mt-12">
-          <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2"></div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-headline font-bold tracking-tight text-center sm:text-4xl lg:text-5xl">Work Experience</h2>
+          <p className="mt-2 text-muted-foreground">My professional journey and accomplishments.</p>
+        </div>
+        <div className="relative">
+          <div className="absolute left-1/2 top-0 h-full w-0.5 bg-border -translate-x-1/2 hidden md:block"></div>
           <div className="space-y-12">
             {experienceData.map((exp, index) => (
               <div key={index} className={cn(
-                  "relative w-full flex",
-                  index % 2 === 0 ? "justify-start" : "justify-end"
+                  "relative w-full flex md:justify-center items-start",
               )}>
-                <div className={cn("w-1/2 p-4", index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left")}>
-                    <div className={cn(
-                        "absolute top-1 h-4 w-4 rounded-full bg-primary flex items-center justify-center ring-8 ring-accent/50",
-                        "left-1/2 -translate-x-1/2"
-                    )}>
-                       <Briefcase className="w-3 h-3 text-primary-foreground" />
-                    </div>
-                    
-                    <p className="font-semibold font-headline text-lg">{exp.role}</p>
-                    <a href={exp.company_link} target="_blank" rel="noopener noreferrer" className={cn("text-primary hover:underline flex items-center gap-1 text-sm", index % 2 === 0 ? "justify-end" : "justify-start")}>
+                 <div className={cn("hidden md:block absolute top-1 h-4 w-4 rounded-full bg-primary flex items-center justify-center ring-8 ring-background", "left-1/2 -translate-x-1/2")}>
+                    <Briefcase className="w-3 h-3 text-primary-foreground" />
+                 </div>
+                 <Card className={cn(
+                     "w-full md:w-[calc(50%-2rem)] p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/20",
+                      index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+                 )}>
+                    <p className="font-semibold font-headline text-lg text-primary">{exp.role}</p>
+                    <a href={exp.company_link} target="_blank" rel="noopener noreferrer" className={cn("text-foreground font-semibold hover:underline flex items-center gap-1 text-md")}>
                       {exp.company} <Link2 className="w-3 h-3"/>
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">{exp.duration}</p>
-                    <div className={cn("text-sm text-muted-foreground mt-1 flex items-center gap-1", index % 2 === 0 ? "justify-end" : "justify-start")}>
+                    <div className={cn("text-sm text-muted-foreground mt-1 flex items-center gap-1")}>
                       <MapPin className="w-3 h-3"/> {exp.location}
                     </div>
                     <Accordion type="single" collapsible className="w-full mt-2">
                       <AccordionItem value="item-1" className="border-none">
-                        <AccordionTrigger className={cn("text-sm py-2 hover:no-underline gap-2", index % 2 === 0 ? "justify-end" : "justify-start")}>View description</AccordionTrigger>
-                        <AccordionContent className="text-base text-foreground/80 text-left">
+                        <AccordionTrigger className={cn("text-sm py-2 hover:no-underline gap-2 justify-start p-0")}>View description</AccordionTrigger>
+                        <AccordionContent className="text-base text-foreground/80 text-left pt-2">
                           {exp.description}
                         </AccordionContent>
                       </AccordionItem>
                     </Accordion>
-                </div>
+                 </Card>
               </div>
             ))}
           </div>
