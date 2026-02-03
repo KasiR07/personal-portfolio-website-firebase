@@ -52,6 +52,14 @@ export const educationData: Education[] = [
 
 export const experienceData: Experience[] = [
     {
+        company: "SWOCTS",
+        company_link: "https://www.linkedin.com/company/swocts/posts/?feedView=all",
+        role: "Data Scientist",
+        duration: "June 2025 - Present",
+        description: "Built AI-driven analytics pipelines using Python, SQL, and statistical modeling to analyze engagement, attendance, and retention metrics across 300+ members, improving event targeting accuracy by 45%. Built predictive machine learning models (Random Forest, Gradient Boosting, Prophet time-series) to forecast event turnout, improving attendance prediction accuracy by 42% and optimizing resource planning across 20+ workshops. Automated performance dashboards in Power BI & Python (Plotly, Matplotlib) to track speaker impact, content effectiveness, and participant learning outcomes, reducing reporting time by 70%. Developed clustering models (K-Means, DBSCAN, hierarchical clustering) to segment 300+ members by technical interest, skill level, and engagement patterns to boost event relevance and participation by 38%",
+        location: "Windsor, Ontario"
+    },
+    {
         company: "Jaguar Land Rover",
         company_link: "#",
         role: "AI Developer Intern",
@@ -335,5 +343,8 @@ export const certificationsData: Certification[] = [
     
 
     
+
+    
+
 
     
