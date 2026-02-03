@@ -29,7 +29,7 @@ const Footer = () => {
                     <ul className="space-y-2">
                         {navItems.filter(item => item.name !== 'Contact').map((item) => (
                             <li key={item.name}>
-                                <Link href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors animated-underline">
+                                <Link href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
                                     {item.name}
                                 </Link>
                             </li>
@@ -41,7 +41,7 @@ const Footer = () => {
                      <p className="text-sm text-muted-foreground">
                         I'm open to new opportunities. <br/> Feel free to reach out!
                     </p>
-                    <a href={`mailto:${personalData.contact.email}`} className="mt-2 inline-block text-sm text-primary animated-underline">
+                    <a href={`mailto:${personalData.contact.email}`} className="mt-2 inline-block text-sm text-primary">
                         {personalData.contact.email}
                     </a>
                 </div>

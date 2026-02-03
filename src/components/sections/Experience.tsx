@@ -32,7 +32,7 @@ const Experience = () => {
                       index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                  )}>
                     <p className="font-semibold font-headline text-lg text-primary">{exp.role}</p>
-                    <a href={exp.company_link} target="_blank" rel="noopener noreferrer" className={cn("text-foreground font-semibold animated-underline flex items-center gap-1 text-md")}>
+                    <a href={exp.company_link} target="_blank" rel="noopener noreferrer" className={cn("text-foreground font-semibold flex items-center gap-1 text-md")}>
                       {exp.company} <Link2 className="w-3 h-3"/>
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">{exp.duration}</p>

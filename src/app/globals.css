@@ -71,17 +71,4 @@
       opacity: 0;
     }
   }
-
-  .animated-underline {
-    @apply relative inline-block;
-  }
-
-  .animated-underline::after {
-    content: '';
-    @apply absolute w-full h-[1px] bg-primary bottom-0 left-0 scale-x-0 transition-transform duration-300 ease-out origin-left;
-  }
-
-  .animated-underline:hover::after {
-    @apply scale-x-100;
-  }
 }
