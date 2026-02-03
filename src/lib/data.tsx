@@ -217,6 +217,12 @@ export const certificationsData: Certification[] = [
         link: "https://achieve.snowflake.com/5bc72e4c-fe5a-4d1f-b8be-f9a5a87b7960",
     },
     {
+        name: "Microsoft Certified: Power Platform Fundamental (PL-900)",
+        issuer: "Microsoft",
+        year: "Nov 2025",
+        link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/F074E090C9DFCADF?sharingId=5CC3A7AB1EF1A976",
+    },
+    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
@@ -300,3 +306,4 @@ export const certificationsData: Certification[] = [
     
 
     
+
