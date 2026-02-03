@@ -1,6 +1,6 @@
 
 
-import { Certification, Experience, NavItem, PersonalData, CategorizedSkill, Education } from "./types";
+import { Certification, Experience, NavItem, PersonalData, CategorizedSkill, Education, Project } from "./types";
 import { BrainCircuit, Cloud, Code, Database, GitMerge, LineChart, Cpu, GanttChartSquare, Briefcase, BotMessageSquare, Workflow, Users, Settings, Terminal, Video, FileCog, FileSpreadsheet, GraduationCap } from "lucide-react";
 import { DockerIcon, PyTorchIcon, PythonIcon, RLangIcon, ScikitLearnIcon, TensorFlowIcon, FigmaIcon } from "@/components/common/Icons";
 
@@ -329,6 +329,68 @@ export const certificationsData: Certification[] = [
     },
 ];
 
+export const projectsData: Project[] = [
+  {
+    id: "1",
+    name: "Predictive Customer Churn Model",
+    description: "A machine learning model that predicts customer churn for a subscription-based service, helping to proactively retain customers.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "FastAPI"],
+    image: "https://picsum.photos/seed/churn/600/400",
+    link: "https://github.com/KasiR07/Churn-Modelling",
+    html_url: "https://github.com/KasiR07/Churn-Modelling",
+    imageHint: "data graph",
+  },
+  {
+    id: "2",
+    name: "Real-time Sentiment Analysis",
+    description: "An application that analyzes social media streams in real-time to determine public sentiment about a specific topic or brand.",
+    technologies: ["PyTorch", "NLP", "Kafka", "React"],
+    image: "https://picsum.photos/seed/sentiment/600/400",
+    link: "https://github.com/KasiR07/hateful-memes-detection",
+    html_url: "https://github.com/KasiR07/hateful-memes-detection",
+    imageHint: "social media",
+  },
+  {
+    id: "3",
+    name: "AI Story Generator",
+    description: "A web application that leverages generative AI to create short stories based on user-provided prompts and characters.",
+    technologies: ["Hugging Face", "Next.js", "Genkit", "Firebase"],
+    image: "https://picsum.photos/seed/story/600/400",
+    link: "https://github.com/KasiR07/ai-story-generator",
+    html_url: "https://github.com/KasiR07/ai-story-generator",
+    imageHint: "fantasy book",
+  },
+  {
+    id: "4",
+    name: "Sales Forecasting with Time Series",
+    description: "A time-series forecasting model using Prophet to predict future sales, enabling better inventory and resource planning.",
+    technologies: ["Python", "Prophet", "StatsModels", "Tableau"],
+    image: "https://picsum.photos/seed/sales/600/400",
+    link: "https://github.com/KasiR07/Rossman-Store-Sales",
+    html_url: "https://github.com/KasiR07/Rossman-Store-Sales",
+    imageHint: "finance chart",
+  },
+  {
+    id: "5",
+    name: "NLP-powered Chatbot",
+    description: "A conversational AI chatbot for customer service, built with RAG architecture to answer questions based on a knowledge base.",
+    technologies: ["GenAI", "RAG", "LLMs", "LangChain"],
+    image: "https://picsum.photos/seed/chatbot/600/400",
+    link: "https://github.com/KasiR07/Health-Care-Chatbot",
+    html_url: "https://github.com/KasiR07/Health-Care-Chatbot",
+    imageHint: "robot conversation",
+  },
+  {
+    id: "6",
+    name: "Image Recognition for Retail",
+    description: "A deep learning model to identify products on store shelves from images, helping with inventory management and stock checking.",
+    technologies: ["TensorFlow", "OpenCV", "CNN", "Docker"],
+    image: "https://picsum.photos/seed/retail/600/400",
+    link: "https://github.com/KasiR07/fashion-mnist-cnn",
+    html_url: "https://github.com/KasiR07/fashion-mnist-cnn",
+    imageHint: "retail store",
+  },
+];
 
 
     
