@@ -211,6 +211,12 @@ export const skillsData: CategorizedSkill[] = [
 
 export const certificationsData: Certification[] = [
     {
+        name: "SnowPro Associate: Platform Certification",
+        issuer: "Snowflake",
+        year: "Dec 2025",
+        link: "https://achieve.snowflake.com/5bc72e4c-fe5a-4d1f-b8be-f9a5a87b7960",
+    },
+    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
