@@ -11,7 +11,8 @@ import { Card } from '../ui/card';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 sm:py-32 bg-accent/20">
+    <section id="experience" className="relative py-24 sm:py-32">
+        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e20,transparent)]"></div></div>
       <div className="container max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-headline font-bold tracking-tight text-center sm:text-4xl lg:text-5xl">Work Experience</h2>
@@ -28,7 +29,7 @@ const Experience = () => {
                     <Briefcase className="w-3 h-3 text-primary-foreground" />
                  </div>
                  <Card className={cn(
-                     "w-full md:w-[calc(50%-2rem)] p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/20",
+                     "w-full md:w-[calc(50%-2rem)] p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/20 hover:border-primary/30",
                       index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                  )}>
                     <p className="font-semibold font-headline text-lg text-primary">{exp.role}</p>

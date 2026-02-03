@@ -31,7 +31,7 @@ const Education = () => {
                     <GraduationCap className="w-3 h-3 text-primary-foreground" />
                  </div>
                  <Card className={cn(
-                     "w-full md:w-[calc(50%-2rem)] p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/20",
+                     "w-full md:w-[calc(50%-2rem)] p-6 transition-all hover:shadow-lg dark:hover:shadow-primary/20 hover:border-primary/30",
                       index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
                  )}>
                     <p className="font-semibold font-headline text-lg text-primary">{edu.degree}</p>

@@ -20,7 +20,7 @@ const Certifications = () => {
         <div className="space-y-4">
           {certificationsData.map((cert, index) => (
             <Card key={index} className={cn(
-                "flex items-center p-4 transition-all hover:shadow-md dark:hover:shadow-primary/20",
+                "flex items-center p-4 transition-all hover:shadow-md dark:hover:shadow-primary/20 hover:border-primary/30",
                 cert.highlight && "border-primary/50 ring-2 ring-primary/20"
                 )}>
                 <div className="flex-shrink-0 p-3 bg-primary/10 rounded-full mr-4">

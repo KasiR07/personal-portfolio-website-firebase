@@ -121,7 +121,7 @@ const Projects = () => {
         ) : displayedProjects.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedProjects.map((project) => (
-              <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20">
+              <Card key={project.id} className="flex flex-col overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl dark:hover:shadow-primary/20 hover:border-primary/30">
                 <CardHeader className="p-0">
                   <div className="aspect-video relative">
                     <Image
