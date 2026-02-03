@@ -223,6 +223,12 @@ export const certificationsData: Certification[] = [
         link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/F074E090C9DFCADF?sharingId=5CC3A7AB1EF1A976",
     },
     {
+        name: "Microsoft Certified: Azure AI Fundamentals (AI-900)",
+        issuer: "Microsoft",
+        year: "Oct 2025",
+        link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/D03B0C52092E8533?sharingId=5CC3A7AB1EF1A976",
+    },
+    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
@@ -306,4 +312,5 @@ export const certificationsData: Certification[] = [
     
 
     
+
 
