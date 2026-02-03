@@ -229,6 +229,12 @@ export const certificationsData: Certification[] = [
         link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/D03B0C52092E8533?sharingId=5CC3A7AB1EF1A976",
     },
     {
+        name: "Databricks Certified: Generative AI Fundamentals",
+        issuer: "Databricks",
+        year: "Sept 2025",
+        link: "https://credentials.databricks.com/842a69c2-cf5e-4cef-828c-a982ba98fe7d#acc.Libgrm7B",
+    },
+    {
         name: "Databricks Fundamentals Accreditation",
         issuer: "Databricks",
         year: "Aug 2025",
@@ -314,3 +320,6 @@ export const certificationsData: Certification[] = [
     
 
 
+
+
+    
