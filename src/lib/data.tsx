@@ -61,7 +61,7 @@ export const experienceData: Experience[] = [
     },
     {
         company: "Jaguar Land Rover",
-        company_link: "#",
+        company_link: "https://www.jlr.com/",
         role: "AI Developer Intern",
         duration: "Sept 2025 - Dec 2025",
         description: "Built and evaluated end-to-end AI analytics pipelines using Python, PyTorch, SQL, and statistical analysis to process and benchmark large-scale experimental datasets, ensuring reproducibility and data integrity under NDA constraints. Performed quantitative performance benchmarking across multiple model execution strategies (CPU/GPUaccelerated workflows), achieving up to 30–45% improvement in runtime efficiency and more stable utilization of compute resources. Applied advanced data analytics techniques including exploratory data analysis (EDA), feature optimization,and error analysis to assess model behavior, variance, and scalability across multiple experimental configurations. Automated experiment tracking, metric aggregation, and visualization using Python (Pandas, NumPy, Matplotlib/Plotly), reducing manual reporting effort by 60% and enabling faster, data-driven technical decisionmaking.",
