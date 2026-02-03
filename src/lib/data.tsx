@@ -254,7 +254,7 @@ export const certificationsData: Certification[] = [
         link: "https://www.credly.com/badges/96db0deb-b3ea-4158-9c27-0da005949fe3/linked_in_profile",
     },
     {
-        name: "Microsoft Certified: Azure Fundamentals",
+        name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         issuer: "Microsoft",
         year: "Jul 2025",
         link: "https://learn.microsoft.com/api/credentials/share/en-us/NagaVenkataSaiRuthvikKasi-2743/FF65E6B9D85700D4?sharingId=5CC3A7AB1EF1A976",
@@ -298,7 +298,7 @@ export const certificationsData: Certification[] = [
         link: "https://credentials.nus.edu.sg/1f3bc135-fbd5-4c3f-91fa-f5808b090d0f",
     },
     {
-        name: "Microsoft Certified: Security, Compliance and Identity Fundamentals",
+        name: "Microsoft Certified: Security, Compliance and Identity Fundamentals (SC-900)",
         issuer: "Microsoft",
         year: "Jul 2023",
         link: "https://www.credly.com/badges/4dc8aa28-05ce-46dd-bf05-81bdb769c99d/linked_in_profile",
@@ -321,5 +321,7 @@ export const certificationsData: Certification[] = [
 
 
 
+
+    
 
     
