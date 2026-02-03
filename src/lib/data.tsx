@@ -346,8 +346,8 @@ export const projectsData: Project[] = [
     description: "A data engineering project utilizing Google Cloud services to build a scalable agent-based system for data processing and analysis.",
     technologies: ["Google Cloud", "BigQuery", "Dataflow", "Python"],
     image: "https://picsum.photos/seed/agentverse/600/400",
-    link: "https://github.com/KasiR07/Google-Cloud-Agentverse",
-    html_url: "https://github.com/KasiR07/Google-Cloud-Agentverse",
+    link: "https://github.com/KasiR07/Google-Cloud-Agentverse---Data-Engineer-",
+    html_url: "https://github.com/KasiR07/Google-Cloud-Agentverse---Data-Engineer-",
     imageHint: "cloud data",
   },
   {
@@ -366,8 +366,8 @@ export const projectsData: Project[] = [
     description: "An in-depth comparative analysis of performance metrics between NVIDIA's CUDA and OpenAI's Triton for optimizing GPU-accelerated deep learning models.",
     technologies: ["CUDA", "Triton", "Python", "PyTorch"],
     image: "https://picsum.photos/seed/cuda/600/400",
-    link: "https://github.com/KasiR07/Comparing-Perfomance-Metrics-of-CUDA-and-Triton",
-    html_url: "https://github.com/KasiR07/Comparing-Perfomance-Metrics-of-CUDA-and-Triton",
+    link: "https://github.com/KasiR07/Perfomance-Metrics-of-CUDA-and-Triton-",
+    html_url: "https://github.com/KasiR07/Perfomance-Metrics-of-CUDA-and-Triton-",
     imageHint: "gpu benchmark",
   },
   {
